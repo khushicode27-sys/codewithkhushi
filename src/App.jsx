@@ -14,7 +14,7 @@ import Testimonials from "./components/Testimonials";
 import FAQ from "./components/FAQ";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import FloatingWhatsApp from "./components/FloatingWhatsApp";
+import FloatingWhatsapp from "./components/FloatingWhatsapp";
 import ScrollTop from "./components/ScrollTop";
 function App() {
   return (
@@ -35,7 +35,7 @@ function App() {
       <FAQ />
       <Contact />
       <Footer />
-      <FloatingWhatsApp />
+      <FloatingWhatsapp />
 <ScrollTop />
     </>
   );
