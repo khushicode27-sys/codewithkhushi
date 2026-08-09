@@ -1,0 +1,465 @@
+/* =========================
+   TABLETS (992px)
+========================= */
+
+@media (max-width:992px){
+
+section{
+    padding:80px 5%;
+}
+
+.container,
+.about,
+.ai-assistant{
+    gap:40px;
+}
+
+h1{
+    font-size:48px;
+}
+
+.subtitle{
+    font-size:18px;
+}
+
+.cards,
+.featured-cards,
+.project-grid,
+.subject-cards,
+.fees-cards,
+.achievement-grid,
+.testimonial-cards{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+
+/* =========================
+   MOBILE (768px)
+========================= */
+
+@media (max-width:768px){
+
+body{
+    overflow-x:hidden;
+}
+
+/* Navbar */
+
+.navbar{
+    padding:15px 20px;
+}
+
+.logo{
+    font-size:18px;
+}
+
+.logo-img{
+    width:50px;
+    height:50px;
+}
+
+.menu-icon{
+    display:block;
+    font-size:30px;
+}
+
+.nav-links{
+    position:absolute;
+    top:80px;
+    left:0;
+    width:100%;
+    background:#241043;
+    flex-direction:column;
+    display:none;
+    padding:25px 0;
+    gap:20px;
+}
+
+.nav-links.active{
+    display:flex;
+}
+
+.nav-links li{
+    text-align:center;
+}
+
+/* Hero */
+
+.container{
+    flex-direction:column-reverse;
+    text-align:center;
+    padding:60px 20px;
+    min-height:auto;
+}
+
+.left,
+.right{
+    width:100%;
+}
+
+h1{
+    font-size:38px;
+    line-height:1.3;
+}
+
+.subtitle{
+    font-size:17px;
+    margin:auto;
+}
+
+.tagline{
+    font-size:16px;
+}
+
+.buttons{
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+button{
+    padding:14px 28px;
+    font-size:16px;
+}
+
+.coding-img{
+    width:320px;
+    margin:auto;
+}
+
+}
+/* =========================
+   PART 2 — SECTIONS & CARDS
+========================= */
+
+@media (max-width:768px){
+
+/* Featured */
+
+.featured{
+    padding:70px 20px;
+}
+
+.featured h2,
+.courses h2,
+.subjects h2,
+.fees h2,
+.projects h2,
+.achievements h2,
+.testimonials h2,
+.faq h2{
+    font-size:32px;
+}
+
+.featured-text,
+.course-text,
+.subject-text,
+.fees-text,
+.project-text,
+.achievement-text,
+.testimonial-text,
+.faq-text{
+    font-size:16px;
+    line-height:1.7;
+}
+
+/* Featured Cards */
+
+.featured-cards{
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.featured-card{
+    padding:25px 18px;
+}
+
+.featured-card h3{
+    font-size:22px;
+}
+
+
+/* Projects */
+
+.projects{
+    padding:70px 20px;
+}
+
+.project-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.project-card{
+    border-radius:16px;
+}
+
+.project-img{
+    height:150px;
+}
+
+.project-content{
+    padding:18px 14px;
+}
+
+.project-content h3{
+    font-size:20px;
+}
+
+
+/* Why Choose */
+
+.why-section{
+    padding:70px 20px;
+}
+
+.why-cards{
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.why-card{
+    padding:25px 18px;
+}
+
+.why-card h3{
+    font-size:20px;
+}
+
+
+/* Courses */
+
+.courses{
+    padding:70px 20px;
+}
+
+.cards,
+.courses-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.card,
+.course-card{
+    padding:25px 18px;
+}
+
+.card h3,
+.course-card h3{
+    font-size:20px;
+}
+
+
+/* Subjects */
+
+.subjects{
+    padding:70px 20px;
+}
+
+.subject-cards,
+.subjects-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.subject-card{
+    padding:25px 18px;
+}
+
+.subject-card h3{
+    font-size:19px;
+}
+
+
+/* Fees */
+
+.fees{
+    padding:70px 20px;
+}
+
+.fees-cards{
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.fees-card{
+    padding:25px 18px;
+}
+
+.fees-card h1{
+    font-size:34px;
+}
+
+
+/* About */
+
+.about{
+    padding:70px 20px;
+    gap:40px;
+}
+
+.about-left h2{
+    font-size:34px;
+}
+
+.about-left p{
+    font-size:17px;
+}
+
+.about-features{
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.feature{
+    font-size:14px;
+}
+
+
+/* Achievements */
+
+.achievements{
+    padding:70px 20px;
+}
+
+.achievement-cards,
+.achievement-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.achievement-card{
+    padding:15px;
+}
+
+.achievement-card img{
+    height:220px;
+}
+
+
+/* Testimonials */
+
+.testimonials{
+    padding:70px 20px;
+}
+
+.testimonial-cards{
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.testimonial-card{
+    padding:25px 18px;
+    min-height:230px;
+}
+
+
+/* FAQ */
+
+.faq{
+    padding:70px 20px;
+}
+
+.faq-container{
+    width:100%;
+}
+
+.faq-item,
+.faq-card{
+    padding:20px;
+}
+
+
+/* Demo Video */
+
+.demo-video{
+    padding:70px 20px;
+}
+
+.demo-video h2{
+    font-size:32px;
+}
+
+.video-container iframe{
+    height:300px;
+}
+
+
+/* AI Chat */
+
+.ai-assistant{
+    padding:70px 20px;
+    gap:35px;
+}
+
+.ai-left h2{
+    font-size:32px;
+}
+
+.ai-left p{
+    font-size:17px;
+}
+
+.ai-right img{
+    width:280px;
+}
+
+
+/* Contact */
+
+.contact{
+    padding:70px 20px;
+}
+
+.contact-title h2{
+    font-size:32px;
+}
+
+.contact-wrapper{
+    gap:30px;
+}
+
+.contact-info{
+    padding:30px 22px;
+}
+
+.contact-form{
+    gap:16px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:14px;
+    font-size:16px;
+}
+
+
+/* Footer */
+
+.footer{
+    padding:50px 20px 20px;
+}
+
+.footer-container{
+    gap:30px;
+}
+
+}
+@media (max-width: 768px) {
+
+  .featured-cards,
+  .project-grid,
+  .why-cards,
+  .cards,
+  .courses-grid,
+  .subject-cards,
+  .subjects-grid,
+  .fees-cards,
+  .achievement-cards,
+  .achievement-grid,
+  .testimonial-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+}

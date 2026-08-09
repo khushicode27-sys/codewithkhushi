@@ -1,0 +1,189 @@
+/* ================= FEATURED ================= */
+
+.featured{
+
+    padding:100px 8%;
+
+    text-align:center;
+
+    background:linear-gradient(135deg,#2b1055,#7597de);
+
+}
+
+.featured h2{
+
+    font-size:45px;
+
+    color:#FFD700;
+
+    margin-bottom:15px;
+
+}
+
+.featured-text{
+
+    max-width:750px;
+
+    margin:auto;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    margin-bottom:60px;
+
+    color:white;
+
+}
+
+/* Cards */
+
+.featured-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.featured-card{
+
+    position:relative;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:22px;
+
+    padding:40px 30px;
+
+    transition:.4s;
+
+}
+
+.featured-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+.featured-badge{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    background:#ff9800;
+
+    color:white;
+
+    padding:6px 15px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+}
+
+.featured-card h3{
+
+    margin-top:25px;
+
+    color:#FFD700;
+
+    font-size:30px;
+
+}
+
+.featured-card p{
+
+    margin:25px 0;
+
+    line-height:1.8;
+
+    color:white;
+
+}
+
+.featured-card button{
+
+    width:100%;
+
+}
+
+/* Tablet */
+
+@media(max-width:992px){
+
+.featured-cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* Mobile */
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+  .featured{
+    padding:70px 20px;
+  }
+
+  .featured h2{
+    font-size:34px;
+  }
+
+  .featured-text{
+    font-size:17px;
+    margin-bottom:40px;
+  }
+
+  .featured-cards{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:15px;
+  }
+
+  .featured-card{
+    padding:25px 15px;
+    border-radius:18px;
+  }
+
+  .featured-badge{
+    top:10px;
+    right:10px;
+    padding:5px 9px;
+    font-size:11px;
+  }
+
+  .featured-card h3{
+    font-size:20px;
+    margin-top:20px;
+  }
+
+  .featured-card p{
+    font-size:14px;
+    line-height:1.6;
+    margin:18px 0;
+  }
+
+  .featured-card button{
+    padding:11px;
+    font-size:14px;
+  }
+
+}

@@ -1,0 +1,370 @@
+/* ================= SUBJECTS ================= */
+
+.subjects{
+
+    padding:100px 8%;
+
+    background:linear-gradient(135deg,#1d2671,#4b0082);
+
+    text-align:center;
+
+}
+
+.subjects-header h2{
+
+    font-size:45px;
+
+    color:#FFD700;
+
+    margin-bottom:15px;
+
+}
+
+.subjects-header p{
+
+    max-width:750px;
+
+    margin:auto;
+
+    font-size:19px;
+
+    line-height:1.8;
+
+    margin-bottom:60px;
+
+}
+
+/* GRID */
+
+.subjects-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+/* CARD */
+
+.subject-card{
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:22px;
+
+    padding:35px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.subject-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.subject-card h3{
+
+    color:#FFD700;
+
+    margin-bottom:20px;
+
+    font-size:26px;
+
+}
+
+.subject-card p{
+
+    line-height:1.8;
+
+    min-height:45px;
+
+}
+
+.subject-card button{
+
+    margin-top:25px;
+
+    padding:14px 28px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#ff9800;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
+
+.subject-card button:hover{
+
+    background:#ff6f00;
+
+}
+
+/* NOTE */
+
+.subject-note{
+
+    margin-top:60px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(12px);
+
+    padding:40px;
+
+    border-radius:22px;
+
+}
+
+.subject-note h3{
+
+    color:#FFD700;
+
+    margin-bottom:15px;
+
+    font-size:30px;
+
+}
+
+.subject-note p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+/* TABLET */
+
+@media(max-width:992px){
+
+.subjects-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* MOBILE */
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+  .subjects{
+    padding:70px 20px;
+  }
+
+  .subjects h2{
+    font-size:34px;
+  }
+
+  .subject-text{
+    font-size:16px;
+    margin-bottom:40px;
+  }
+
+  .subjects-grid,
+  .subject-cards{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:15px;
+  }
+
+  .subject-card{
+    padding:24px 15px;
+    border-radius:18px;
+  }
+
+  .subject-card h3{
+    font-size:19px;
+    margin-bottom:10px;
+  }
+
+  .subject-card p{
+    font-size:14px;
+    line-height:1.6;
+  }
+
+  .subject-card button{
+    padding:11px 16px;
+    font-size:14px;
+  }
+
+  .subject-note{
+    margin-top:35px;
+    padding:25px 18px;
+  }
+
+  .subject-note h3{
+    font-size:22px;
+  }
+
+  .subject-note p{
+    font-size:15px;
+    line-height:1.7;
+  }
+
+}
+/* ================= SUBJECT POPUP ================= */
+
+.subject-popup {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.88);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  z-index: 9999;
+}
+
+.subject-popup-content {
+  position: relative;
+
+  width: 90%;
+  max-width: 600px;
+
+  background: linear-gradient(145deg, #0b0b14, #17172a);
+
+  border: 1px solid rgba(255, 215, 0, 0.35);
+
+  border-radius: 25px;
+
+  padding: 40px 30px;
+
+  text-align: center;
+
+  box-shadow:
+    0 0 30px rgba(0, 0, 0, 0.7),
+    0 0 60px rgba(255, 215, 0, 0.08);
+
+  animation: subjectPopup 0.3s ease;
+}
+
+.subject-popup-icon {
+  font-size: 65px;
+  margin-bottom: 15px;
+}
+
+.subject-popup-content h2 {
+  color: #FFD700;
+  font-size: 30px;
+  margin-bottom: 18px;
+}
+
+.subject-popup-content p {
+  color: #e5e5e5;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.subject-popup-close {
+  position: absolute;
+
+  top: -15px;
+  right: -15px;
+
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #11111d;
+  color: #FFD700;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.subject-popup-close:hover {
+  background: #FFD700;
+  color: #11111d;
+  transform: rotate(90deg) scale(1.08);
+}
+
+.subject-enquire {
+  margin-top: 25px;
+
+  padding: 13px 25px;
+
+  border: none;
+  border-radius: 30px;
+
+  background: #25D366;
+  color: white;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.subject-enquire:hover {
+  background: #1ebc59;
+  transform: translateY(-3px);
+}
+
+@keyframes subjectPopup {
+
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+}
+
+@media(max-width:768px) {
+
+  .subject-popup-content {
+    width: 92%;
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+
+  .subject-popup-icon {
+    font-size: 50px;
+  }
+
+  .subject-popup-content h2 {
+    font-size: 24px;
+  }
+
+  .subject-popup-content p {
+    font-size: 15px;
+  }
+
+}

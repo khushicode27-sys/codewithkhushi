@@ -1,0 +1,40 @@
+.scroll-top{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+
+    width:55px;
+    height:55px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#ff9800;
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+    z-index:999;
+
+    transition:.35s;
+}
+
+.scroll-top:hover{
+    transform:translateY(-6px);
+    background:#ff6f00;
+}
+@media (max-width:768px){
+
+.scroll-top{
+    width:48px;
+    height:48px;
+    font-size:18px;
+    right:18px;
+    bottom:18px;
+}
+
+}

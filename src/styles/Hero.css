@@ -1,0 +1,291 @@
+/* ================= HERO ================= */
+
+.hero{
+
+    width:100%;
+    min-height:90vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:80px 8%;
+
+    gap:70px;
+}
+
+.hero-left{
+
+    flex:1;
+
+}
+
+.hero-right{
+
+    flex:1;
+
+    display:flex;
+    justify-content:center;
+}
+
+.hero-tag{
+
+    color:#FFD700;
+    font-size:18px;
+    margin-bottom:20px;
+    font-weight:600;
+}
+
+.hero h1{
+
+    font-size:65px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+
+    color:#FFD700;
+
+}
+
+.hero-subtitle{
+
+    font-size:20px;
+    line-height:1.8;
+    color:#f1f1f1;
+
+    max-width:650px;
+}
+
+.hero-buttons{
+
+    display:flex;
+    gap:20px;
+    margin-top:40px;
+}
+
+.primary{
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#ff9800;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+}
+
+.primary:hover{
+
+    background:#ff6f00;
+}
+
+.secondary{
+
+    padding:15px 35px;
+
+    border:2px solid white;
+
+    border-radius:50px;
+
+    background:transparent;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+}
+
+.secondary:hover{
+
+    background:white;
+    color:#6a0dad;
+}
+
+.hero-image{
+
+    width:500px;
+    max-width:100%;
+
+    border-radius:20px;
+
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ================= TABLET ================= */
+
+@media(max-width:992px){
+
+.hero{
+
+gap:40px;
+
+padding:60px 5%;
+
+}
+
+.hero h1{
+
+font-size:50px;
+
+}
+
+.hero-subtitle{
+
+font-size:18px;
+
+}
+
+.hero-image{
+
+width:420px;
+
+}
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.hero{
+
+flex-direction:column-reverse;
+
+text-align:center;
+
+padding:40px 20px;
+
+}
+
+.hero-left{
+
+width:100%;
+
+}
+
+.hero-right{
+
+width:100%;
+
+}
+
+.hero-image{
+
+width:300px;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero-subtitle{
+
+font-size:17px;
+
+max-width:100%;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+}
+
+.primary,
+.secondary{
+
+width:220px;
+
+}
+
+}
+/* ================= HERO WORD ANIMATION ================= */
+
+.hero-title .word {
+  display: inline-block;
+
+  opacity: 0;
+
+  transform: translateY(30px);
+
+  animation: heroWordIn 0.7s ease forwards;
+}
+
+/* Different timing */
+
+.hero-title .word-1 {
+  animation-delay: 0.2s;
+}
+
+.hero-title .word-2 {
+  animation-delay: 0.45s;
+}
+
+.hero-title .word-3 {
+  animation-delay: 0.7s;
+}
+
+.hero-title .word-4 {
+  animation-delay: 0.95s;
+}
+
+/* Coding yellow rahega */
+
+.hero-title .highlight {
+  color: #FFD700;
+}
+
+/* Animation */
+
+@keyframes heroWordIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

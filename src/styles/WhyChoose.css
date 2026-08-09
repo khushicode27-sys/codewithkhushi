@@ -1,0 +1,507 @@
+/* ================= WHY CHOOSE ================= */
+
+.why-section {
+    padding: 100px 8%;
+    text-align: center;
+    background: linear-gradient(135deg, #1d2671, #4b0082);
+}
+
+/* ================= HEADER ================= */
+
+.why-tag {
+    color: #FFD700;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.why-header h2 {
+    font-size: 45px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.why-header span {
+    color: #FFD700;
+}
+
+.why-subtitle {
+    max-width: 750px;
+    margin: auto;
+    color: #eee;
+    line-height: 1.8;
+    font-size: 18px;
+    margin-bottom: 60px;
+}
+
+/* ================= GRID ================= */
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* ================= CARD ================= */
+
+.why-card {
+    background: white;
+    border-radius: 25px;
+    padding: 35px;
+    transition: .35s;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .2);
+    cursor: pointer;
+}
+
+.why-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .3);
+}
+
+.why-card img {
+    width: 75px;
+    margin-bottom: 20px;
+    transition: .35s;
+}
+
+.why-card:hover img {
+    transform: scale(1.1) rotate(8deg);
+}
+
+.why-card h3 {
+    color: #2b2b6e;
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+
+.why-card p {
+    color: #555;
+    line-height: 1.8;
+}
+
+/* ================= PREMIUM CTA ================= */
+
+.why-bottom {
+    position: relative;
+
+    margin-top: 70px;
+    padding: 45px 30px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, .14),
+            rgba(255, 255, 255, .04)
+        );
+
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 215, 0, .25);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, .25);
+}
+
+/* Decorative glow */
+
+.why-bottom::before {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    top: -120px;
+    left: -80px;
+
+    background: rgba(255, 215, 0, .12);
+
+    border-radius: 50%;
+
+    filter: blur(50px);
+
+    pointer-events: none;
+}
+
+.why-bottom::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    bottom: -100px;
+    right: -60px;
+
+    background: rgba(130, 60, 255, .18);
+
+    border-radius: 50%;
+
+    filter: blur(45px);
+
+    pointer-events: none;
+}
+
+/* CTA HEADING */
+
+.why-bottom h3 {
+    position: relative;
+    z-index: 1;
+
+    color: #FFD700;
+
+    font-size: 32px;
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        0 0 15px rgba(255, 215, 0, .2);
+
+    animation: ctaFloat 3s ease-in-out infinite;
+}
+
+/* CTA TEXT */
+
+.why-bottom p {
+    position: relative;
+    z-index: 1;
+
+    color: white;
+
+    max-width: 700px;
+
+    margin: 0 auto 28px;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+}
+
+/* ================= ENROLL BUTTON ================= */
+
+.why-bottom .primary {
+    position: relative;
+    z-index: 2;
+
+    padding: 15px 40px;
+
+    border: none;
+
+    border-radius: 40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #FFD700,
+            #ff9800
+        );
+
+    color: #111;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 25px rgba(255, 152, 0, .3);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.why-bottom .primary:hover {
+    transform: translateY(-5px) scale(1.04);
+
+    box-shadow:
+        0 15px 35px rgba(255, 152, 0, .45);
+}
+
+/* Button shine */
+
+.why-bottom .primary::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 60%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, .5),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    animation: buttonShine 3.5s infinite;
+}
+
+/* ================= CTA ANIMATIONS ================= */
+
+@keyframes ctaFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+@keyframes buttonShine {
+    0% {
+        left: -100%;
+    }
+
+    45%,
+    100% {
+        left: 140%;
+    }
+}
+
+/* ================= WHY CHOOSE POPUP ================= */
+
+.why-popup {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, .88);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 9999;
+}
+
+.why-popup-content {
+    position: relative;
+
+    width: 90%;
+    max-width: 600px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0b0b14,
+            #17172a
+        );
+
+    border: 1px solid rgba(255, 215, 0, .35);
+
+    border-radius: 25px;
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 0 30px rgba(0, 0, 0, .7),
+        0 0 60px rgba(255, 215, 0, .08);
+
+    animation: whyPopup .3s ease;
+}
+
+.why-popup-content img {
+    width: 90px;
+    height: 90px;
+
+    object-fit: contain;
+
+    margin-bottom: 20px;
+
+    filter:
+        drop-shadow(
+            0 0 10px rgba(255, 215, 0, .25)
+        );
+}
+
+.why-popup-content h2 {
+    color: #FFD700;
+
+    font-size: 30px;
+
+    margin-bottom: 18px;
+}
+
+.why-popup-content p {
+    color: #e5e5e5;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+}
+
+/* ================= CLOSE BUTTON ================= */
+
+.why-popup-close {
+    position: absolute;
+
+    top: -15px;
+    right: -15px;
+
+    width: 45px;
+    height: 45px;
+
+    border: 1px solid rgba(255, 255, 255, .2);
+
+    border-radius: 50%;
+
+    background: #11111d;
+
+    color: #FFD700;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.why-popup-close:hover {
+    background: #FFD700;
+
+    color: #111;
+
+    transform:
+        rotate(90deg)
+        scale(1.08);
+}
+
+/* ================= POPUP ANIMATION ================= */
+
+@keyframes whyPopup {
+    from {
+        opacity: 0;
+
+        transform:
+            scale(.8)
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+    }
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 992px) {
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .why-section {
+        padding: 70px 20px;
+    }
+
+    .why-header h2 {
+        font-size: 34px;
+    }
+
+    .why-subtitle {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .why-card {
+        padding: 22px 15px;
+        border-radius: 18px;
+    }
+
+    .why-card img {
+        width: 55px;
+        margin-bottom: 12px;
+    }
+
+    .why-card h3 {
+        font-size: 19px;
+        margin-bottom: 10px;
+    }
+
+    .why-card p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .why-bottom {
+        padding: 35px 18px;
+        margin-top: 40px;
+    }
+
+    .why-bottom h3 {
+        font-size: 24px;
+    }
+
+    .why-bottom p {
+        font-size: 15px;
+    }
+
+    .why-bottom .primary {
+        width: 100%;
+        padding: 14px 25px;
+    }
+
+    /* POPUP */
+
+    .why-popup-content {
+        width: 92%;
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
+
+    .why-popup-content img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .why-popup-content h2 {
+        font-size: 24px;
+    }
+
+    .why-popup-content p {
+        font-size: 15px;
+    }
+
+}
