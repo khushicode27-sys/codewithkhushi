@@ -4,10 +4,13 @@ import "../styles/AIChat.css";
 
 function AIChat() {
   const [isOpen, setIsOpen] = useState(false);
+
   const [message, setMessage] = useState("");
+
   const [reply, setReply] = useState(
     "👋 Hello! Ask me anything about Coding, AI or Robotics."
   );
+
   const [loading, setLoading] = useState(false);
 
   const askAI = async () => {
@@ -17,33 +20,37 @@ function AIChat() {
     setReply("🤔 Thinking...");
 
     try {
-      const response = await fetch(
-        `http://${window.location.hostname}:5000/chat`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            message: message,
-          }),
-        }
-      );
+      const response = await fetch("/api/chat", {
+        method: "POST",
+
+        headers: {
+          "Content-Type": "application/json",
+        },
+
+        body: JSON.stringify({
+          message: message,
+        }),
+      });
 
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.reply || "Something went wrong");
+        throw new Error(
+          data.reply || "Something went wrong"
+        );
       }
 
       setReply(data.reply);
+
       setMessage("");
+
     } catch (error) {
-      console.error(error);
+      console.error("AI ERROR:", error);
 
       setReply(
-        "❌ AI se connection nahi ho pa raha. Please check karo ki server running hai."
+        "❌ AI se connection nahi ho pa raha. Please try again."
       );
+
     } finally {
       setLoading(false);
     }
@@ -57,7 +64,7 @@ function AIChat() {
 
   return (
     <>
-      {/* FLOATING AI BUTTON */}
+      {/* ================= FLOATING AI BUTTON ================= */}
 
       <button
         className="ai-floating-button"
@@ -67,15 +74,21 @@ function AIChat() {
         {isOpen ? "✕" : "🤖"}
       </button>
 
-      {/* AI CHAT WINDOW */}
+      {/* ================= AI CHAT WINDOW ================= */}
 
       {isOpen && (
         <div className="ai-floating-chat">
 
+          {/* HEADER */}
+
           <div className="ai-chat-header">
+
             <div>
               <h3>🤖 AI Assistant</h3>
-              <span>CodeWithKhushi</span>
+
+              <span>
+                CodeWithKhushi
+              </span>
             </div>
 
             <button
@@ -84,24 +97,33 @@ function AIChat() {
             >
               ✕
             </button>
+
           </div>
+
+          {/* CHAT BODY */}
 
           <div className="ai-chat-body">
 
             <div className="bot-message">
+
               <ReactMarkdown>
                 {reply}
               </ReactMarkdown>
+
             </div>
 
           </div>
+
+          {/* INPUT */}
 
           <div className="ai-chat-input">
 
             <input
               type="text"
               value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              onChange={(e) =>
+                setMessage(e.target.value)
+              }
               onKeyDown={handleKeyDown}
               placeholder="Ask your question..."
               disabled={loading}
@@ -110,6 +132,7 @@ function AIChat() {
             <button
               onClick={askAI}
               disabled={loading}
+              aria-label="Ask AI"
             >
               {loading ? "..." : "➤"}
             </button>
