@@ -1,7 +1,7 @@
-import "../styles/FloatingWhatsApp.css";
+import "../styles/FloatingWhatsapp.css";
 import { FaWhatsapp } from "react-icons/fa";
 
-function FloatingWhatsApp() {
+function FloatingWhatsapp() {
   return (
     <a
       href="https://wa.me/916367975699?text=Hi%20Khushi!%20I%20want%20to%20know%20about%20your%20coding%20courses."
@@ -14,4 +14,4 @@ function FloatingWhatsApp() {
   );
 }
 
-export default FloatingWhatsApp;
+export default FloatingWhatsapp;
