@@ -15,36 +15,27 @@ export default async function handler(req, res) {
     }
 
     const response = await fetch(
-      "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent",
+      "https://api.groq.com/openai/v1/chat/completions",
       {
         method: "POST",
+
         headers: {
           "Content-Type": "application/json",
-          "x-goog-api-key": process.env.GEMINI_API_KEY,
+          Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
         },
+
         body: JSON.stringify({
-          contents: [
+          model: "llama-3.1-8b-instant",
+
+          messages: [
             {
-              parts: [
-                {
-                  text: `You are the friendly AI Assistant for CodeWithKhushi.
-
-You help students with:
-- Coding
-- C & C++
-- Python
-- Java
-- Web Development
-- Artificial Intelligence
-- Robotics
-- Scratch
-
-Explain concepts in a simple, friendly and beginner-friendly way.
-
-User Question:
-${message}`,
-                },
-              ],
+              role: "system",
+              content:
+                "You are the friendly AI Assistant for CodeWithKhushi, a Coding, AI and Robotics Academy. Answer questions clearly and simply. Help students with Coding, C, C++, Python, Java, Web Development, Artificial Intelligence, Robotics and Scratch. Keep explanations beginner-friendly.",
+            },
+            {
+              role: "user",
+              content: message,
             },
           ],
         }),
@@ -54,18 +45,21 @@ ${message}`,
     const data = await response.json();
 
     if (!response.ok) {
-      console.error("Gemini API Error:", data);
+      console.error("Groq API Error:", data);
 
       return res.status(response.status).json({
-        reply: "AI service se response nahi aa raha.",
+        reply:
+          data?.error?.message ||
+          "AI service se response nahi aa raha.",
       });
     }
 
     const reply =
-      data?.candidates?.[0]?.content?.parts?.[0]?.text;
+      data?.choices?.[0]?.message?.content ||
+      "Sorry, mujhe answer nahi mila.";
 
     return res.status(200).json({
-      reply: reply || "Sorry, mujhe answer nahi mila.",
+      reply,
     });
   } catch (error) {
     console.error("AI ERROR:", error);
