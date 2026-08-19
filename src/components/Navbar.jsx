@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/logo.jpeg";
 import "../styles/Navbar.css";
@@ -12,12 +13,17 @@ function Navbar() {
     <nav className="navbar">
 
       <div className="logo">
-        <img
-          src={logo}
-          alt="CodeWithKhushi Logo"
-          className="logo-img"
-        />
-        <h2>CodeWithKhushi</h2>
+        <Link to="/" onClick={closeMenu}>
+          <img
+            src={logo}
+            alt="CodeWithKhushi Logo"
+            className="logo-img"
+          />
+        </Link>
+
+        <Link to="/" onClick={closeMenu}>
+          <h2>CodeWithKhushi</h2>
+        </Link>
       </div>
 
       <div
@@ -30,33 +36,51 @@ function Navbar() {
       <ul className={menuOpen ? "nav-links active" : "nav-links"}>
 
         <li>
-          <a href="#home" onClick={closeMenu}>
+          <Link to="/" onClick={closeMenu}>
             Home
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a href="#courses" onClick={closeMenu}>
+          <Link to="/courses" onClick={closeMenu}>
             Courses
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a href="#projects" onClick={closeMenu}>
+          <Link to="/projects" onClick={closeMenu}>
             Projects
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a href="#about" onClick={closeMenu}>
+          <Link to="/about" onClick={closeMenu}>
             About
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a href="#contact" onClick={closeMenu}>
+          <Link to="/testimonials" onClick={closeMenu}>
+            Testimonials
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/faq" onClick={closeMenu}>
+            FAQ
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/contact" onClick={closeMenu}>
             Contact
-          </a>
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/ai-assistant" onClick={closeMenu}>
+            🤖 AI Assistant
+          </Link>
         </li>
 
       </ul>
