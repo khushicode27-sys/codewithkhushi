@@ -1,0 +1,131 @@
+/* ================= PAGE NAVIGATION ================= */
+
+.page-navigation {
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 35px 8% 60px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  background: #10101b;
+}
+
+.page-nav-btn {
+  min-width: 190px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 14px 20px;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #17172a,
+      #0b0b14
+    );
+
+  border: 1px solid rgba(255, 215, 0, 0.18);
+
+  color: white;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.page-nav-btn:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(255, 215, 0, 0.5);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.page-nav-btn span {
+  color: #ffd700;
+
+  font-size: 25px;
+
+  font-weight: bold;
+}
+
+.page-nav-btn div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.page-nav-btn small {
+  color: #888;
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+.page-nav-btn strong {
+  color: white;
+
+  font-size: 15px;
+}
+
+.page-nav-btn.next {
+  margin-left: auto;
+
+  text-align: right;
+
+  justify-content: flex-end;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+  .page-navigation {
+    padding: 25px 15px 45px;
+
+    gap: 10px;
+  }
+
+  .page-nav-btn {
+    min-width: 0;
+
+    width: 48%;
+
+    padding: 12px;
+
+    gap: 9px;
+  }
+
+  .page-nav-btn span {
+    font-size: 20px;
+  }
+
+  .page-nav-btn strong {
+    font-size: 13px;
+  }
+
+  .page-nav-btn small {
+    font-size: 9px;
+  }
+
+}

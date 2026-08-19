@@ -262,3 +262,34 @@
     white-space: nowrap !important;
   }
 }
+/* ================= NAVBAR ROUTER ================= */
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-title {
+  text-decoration: none;
+}
+
+.nav-links a.active-link {
+  color: #FFD700;
+}
+
+/* Prevent logo title default link styling */
+
+.logo h2 {
+  margin: 0;
+}
+
+/* Mobile active link */
+
+@media (max-width: 768px) {
+
+  .nav-links a.active-link {
+    color: #FFD700;
+  }
+
+}

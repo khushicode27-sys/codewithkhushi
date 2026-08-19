@@ -1,9 +1,8 @@
+import { Link } from "react-router-dom";
 import "../styles/Featured.css";
 
 function Featured() {
-
   return (
-
     <section className="featured" id="featured">
 
       <h2>⭐ Featured Courses</h2>
@@ -14,6 +13,8 @@ function Featured() {
       </p>
 
       <div className="featured-cards">
+
+        {/* SCRATCH */}
 
         <div className="featured-card">
 
@@ -29,19 +30,17 @@ function Featured() {
             aged 6–14.
           </p>
 
-          <button
+          <Link
+            to="/courses"
             className="primary"
-            onClick={() =>
-              window.open(
-                "https://wa.me/916367975699?text=Hi!%20I%20want%20to%20know%20about%20Scratch%20Coding.",
-                "_blank"
-              )
-            }
           >
-            Learn More
-          </button>
+            Learn More →
+          </Link>
 
         </div>
+
+
+        {/* ROBOTICS */}
 
         <div className="featured-card">
 
@@ -56,19 +55,17 @@ function Featured() {
             Sensors and STEM concepts with hands-on learning.
           </p>
 
-          <button
+          <Link
+            to="/courses"
             className="primary"
-            onClick={() =>
-              window.open(
-                "https://wa.me/916367975699?text=Hi!%20I%20want%20to%20know%20about%20Robotics.",
-                "_blank"
-              )
-            }
           >
-            Learn More
-          </button>
+            Learn More →
+          </Link>
 
         </div>
+
+
+        {/* PYTHON */}
 
         <div className="featured-card">
 
@@ -83,26 +80,19 @@ function Featured() {
             with interactive live classes.
           </p>
 
-          <button
+          <Link
+            to="/courses"
             className="primary"
-            onClick={() =>
-              window.open(
-                "https://wa.me/916367975699?text=Hi!%20I%20want%20to%20know%20about%20Python.",
-                "_blank"
-              )
-            }
           >
-            Learn More
-          </button>
+            Learn More →
+          </Link>
 
         </div>
 
       </div>
 
     </section>
-
   );
-
 }
 
 export default Featured;

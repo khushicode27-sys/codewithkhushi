@@ -1,19 +1,69 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+
 import logo from "../assets/logo.jpeg";
 import "../styles/Navbar.css";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
-  const closeMenu = () => setMenuOpen(false);
+  const closeMenu = () => {
+    setMenuOpen(false);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const navLinks = [
+    {
+      name: "Home",
+      path: "/",
+    },
+    {
+      name: "Courses",
+      path: "/courses",
+    },
+    {
+      name: "Projects",
+      path: "/projects",
+    },
+    {
+      name: "About",
+      path: "/about",
+    },
+    {
+      name: "Testimonials",
+      path: "/testimonials",
+    },
+    {
+      name: "FAQ",
+      path: "/faq",
+    },
+    {
+      name: "Contact",
+      path: "/contact",
+    },
+    {
+      name: "🤖 AI Assistant",
+      path: "/ai-assistant",
+    },
+  ];
 
   return (
     <nav className="navbar">
 
+      {/* LOGO */}
+
       <div className="logo">
-        <Link to="/" onClick={closeMenu}>
+
+        <Link
+          to="/"
+          onClick={closeMenu}
+          className="logo-link"
+        >
           <img
             src={logo}
             alt="CodeWithKhushi Logo"
@@ -21,10 +71,18 @@ function Navbar() {
           />
         </Link>
 
-        <Link to="/" onClick={closeMenu}>
+        <Link
+          to="/"
+          onClick={closeMenu}
+          className="logo-title"
+        >
           <h2>CodeWithKhushi</h2>
         </Link>
+
       </div>
+
+
+      {/* MOBILE MENU */}
 
       <div
         className="menu-icon"
@@ -33,55 +91,36 @@ function Navbar() {
         {menuOpen ? <FaTimes /> : <FaBars />}
       </div>
 
-      <ul className={menuOpen ? "nav-links active" : "nav-links"}>
 
-        <li>
-          <Link to="/" onClick={closeMenu}>
-            Home
-          </Link>
-        </li>
+      {/* NAVIGATION */}
 
-        <li>
-          <Link to="/courses" onClick={closeMenu}>
-            Courses
-          </Link>
-        </li>
+      <ul
+        className={
+          menuOpen
+            ? "nav-links active"
+            : "nav-links"
+        }
+      >
 
-        <li>
-          <Link to="/projects" onClick={closeMenu}>
-            Projects
-          </Link>
-        </li>
+        {navLinks.map((link) => (
 
-        <li>
-          <Link to="/about" onClick={closeMenu}>
-            About
-          </Link>
-        </li>
+          <li key={link.path}>
 
-        <li>
-          <Link to="/testimonials" onClick={closeMenu}>
-            Testimonials
-          </Link>
-        </li>
+            <Link
+              to={link.path}
+              onClick={closeMenu}
+              className={
+                location.pathname === link.path
+                  ? "active-link"
+                  : ""
+              }
+            >
+              {link.name}
+            </Link>
 
-        <li>
-          <Link to="/faq" onClick={closeMenu}>
-            FAQ
-          </Link>
-        </li>
+          </li>
 
-        <li>
-          <Link to="/contact" onClick={closeMenu}>
-            Contact
-          </Link>
-        </li>
-
-        <li>
-          <Link to="/ai-assistant" onClick={closeMenu}>
-            🤖 AI Assistant
-          </Link>
-        </li>
+        ))}
 
       </ul>
 

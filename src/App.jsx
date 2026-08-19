@@ -1,5 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import CourseHero from "./components/CourseHero";
+import ProjectHero from "./components/ProjectHero";
+import FAQHero from "./components/FAQHero";
+import ContactHero from "./components/ContactHero";
+import PageNavigation from "./components/PageNavigation";
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Featured from "./components/Featured";
@@ -19,6 +25,9 @@ import Footer from "./components/Footer";
 import FloatingWhatsapp from "./components/FloatingWhatsapp";
 import ScrollTop from "./components/ScrollTop";
 
+
+/* ================= HOME ================= */
+
 function Home() {
   return (
     <>
@@ -26,20 +35,68 @@ function Home() {
       <Featured />
       <Projects />
       <WhyChoose />
+
+      <PageNavigation
+        next={{
+          name: "Courses",
+          path: "/courses",
+        }}
+      />
     </>
   );
 }
 
+
+/* ================= COURSES ================= */
+
 function CoursesPage() {
   return (
     <>
+      <CourseHero />
       <Courses />
       <Subjects />
       <Fees />
       <DemoVideo />
+
+      <PageNavigation
+        previous={{
+          name: "Home",
+          path: "/",
+        }}
+        next={{
+          name: "Projects",
+          path: "/projects",
+        }}
+      />
     </>
   );
 }
+
+
+/* ================= PROJECTS ================= */
+
+function ProjectsPage() {
+  return (
+    <>
+      <ProjectHero />
+      <Projects />
+
+      <PageNavigation
+        previous={{
+          name: "Courses",
+          path: "/courses",
+        }}
+        next={{
+          name: "About",
+          path: "/about",
+        }}
+      />
+    </>
+  );
+}
+
+
+/* ================= ABOUT ================= */
 
 function AboutPage() {
   return (
@@ -47,70 +104,197 @@ function AboutPage() {
       <About />
       <WhyChoose />
       <Achievements />
+
+      <PageNavigation
+        previous={{
+          name: "Projects",
+          path: "/projects",
+        }}
+        next={{
+          name: "Testimonials",
+          path: "/testimonials",
+        }}
+      />
     </>
   );
 }
 
-function ProjectsPage() {
-  return <Projects />;
-}
+
+/* ================= TESTIMONIALS ================= */
 
 function TestimonialsPage() {
   return (
     <>
       <Testimonials />
       <Achievements />
+
+      <PageNavigation
+        previous={{
+          name: "About",
+          path: "/about",
+        }}
+        next={{
+          name: "FAQ",
+          path: "/faq",
+        }}
+      />
     </>
   );
 }
 
+
+/* ================= FAQ ================= */
+
 function FAQPage() {
-  return <FAQ />;
+  return (
+    <>
+      <FAQHero />
+      <FAQ />
+
+      <PageNavigation
+        previous={{
+          name: "Testimonials",
+          path: "/testimonials",
+        }}
+        next={{
+          name: "Contact",
+          path: "/contact",
+        }}
+      />
+    </>
+  );
 }
 
+
+/* ================= CONTACT ================= */
+
 function ContactPage() {
-  return <Contact />;
+  return (
+    <>
+      <ContactHero />
+      <Contact />
+
+      <PageNavigation
+        previous={{
+          name: "FAQ",
+          path: "/faq",
+        }}
+        next={{
+          name: "AI Assistant",
+          path: "/ai-assistant",
+        }}
+      />
+    </>
+  );
 }
+
+
+/* ================= AI ASSISTANT ================= */
 
 function AIPage() {
   return (
     <>
       <AIChat />
+
+      <PageNavigation
+        previous={{
+          name: "Contact",
+          path: "/contact",
+        }}
+      />
     </>
   );
 }
 
+
+/* ================= APP ================= */
+
 function App() {
   return (
     <BrowserRouter>
+
       <Navbar />
 
       <main>
+
         <Routes>
-          <Route path="/" element={<Home />} />
 
-          <Route path="/courses" element={<CoursesPage />} />
+          {/* HOME */}
 
-          <Route path="/about" element={<AboutPage />} />
+          <Route
+            path="/"
+            element={<Home />}
+          />
 
-          <Route path="/projects" element={<ProjectsPage />} />
+
+          {/* COURSES */}
+
+          <Route
+            path="/courses"
+            element={<CoursesPage />}
+          />
+
+
+          {/* PROJECTS */}
+
+          <Route
+            path="/projects"
+            element={<ProjectsPage />}
+          />
+
+
+          {/* ABOUT */}
+
+          <Route
+            path="/about"
+            element={<AboutPage />}
+          />
+
+
+          {/* TESTIMONIALS */}
 
           <Route
             path="/testimonials"
             element={<TestimonialsPage />}
           />
 
-          <Route path="/faq" element={<FAQPage />} />
 
-          <Route path="/contact" element={<ContactPage />} />
+          {/* FAQ */}
 
-          <Route path="/ai-assistant" element={<AIPage />} />
+          <Route
+            path="/faq"
+            element={<FAQPage />}
+          />
+
+
+          {/* CONTACT */}
+
+          <Route
+            path="/contact"
+            element={<ContactPage />}
+          />
+
+
+          {/* AI ASSISTANT */}
+
+          <Route
+            path="/ai-assistant"
+            element={<AIPage />}
+          />
+
         </Routes>
+
       </main>
 
+
+      {/* GLOBAL COMPONENTS */}
+
       <Footer />
+
       <FloatingWhatsapp />
+
       <ScrollTop />
+
     </BrowserRouter>
   );
 }

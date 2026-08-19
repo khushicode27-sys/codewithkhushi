@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/Projects.css";
 
 import scratch from "../assets/scratch.jpg";
@@ -47,22 +48,33 @@ function Projects() {
     },
   ];
 
+  const closePopup = () => {
+    setSelectedProject(null);
+  };
+
   return (
     <section className="projects" id="projects">
 
       <div className="projects-header">
+
         <h2>🚀 Projects You'll Build</h2>
 
         <p>
           Learn by creating exciting real-world projects and build
           confidence through practical learning.
         </p>
+
       </div>
+
 
       <div className="projects-grid">
 
         {projects.map((project, index) => (
-          <div className="project-card" key={index}>
+
+          <div
+            className="project-card"
+            key={index}
+          >
 
             <img
               src={project.image}
@@ -86,16 +98,19 @@ function Projects() {
             </div>
 
           </div>
+
         ))}
 
       </div>
 
-      {/* PROJECT POPUP */}
+
+      {/* ================= PROJECT POPUP ================= */}
 
       {selectedProject && (
+
         <div
           className="project-popup"
-          onClick={() => setSelectedProject(null)}
+          onClick={closePopup}
         >
 
           <div
@@ -105,23 +120,43 @@ function Projects() {
 
             <button
               className="project-popup-close"
-              onClick={() => setSelectedProject(null)}
+              onClick={closePopup}
+              aria-label="Close"
             >
               ✕
             </button>
+
 
             <img
               src={selectedProject.image}
               alt={selectedProject.title}
             />
 
-            <h2>{selectedProject.title}</h2>
 
-            <p>{selectedProject.description}</p>
+            <h2>
+              {selectedProject.title}
+            </h2>
+
+
+            <p>
+              {selectedProject.description}
+            </p>
+
+
+            {/* GO TO COURSES */}
+
+            <Link
+              to="/courses"
+              className="primary project-course-btn"
+              onClick={closePopup}
+            >
+              Explore Courses →
+            </Link>
 
           </div>
 
         </div>
+
       )}
 
     </section>

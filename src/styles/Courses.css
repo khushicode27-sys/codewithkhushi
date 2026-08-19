@@ -1,359 +1,606 @@
-/* ================= COURSES ================= */
+/* =====================================================
+   CODEWITHKHUSHI — COURSES PAGE
+===================================================== */
 
-.courses{
+.courses {
+  position: relative;
+  padding: 110px 7%;
+  text-align: center;
+  overflow: hidden;
 
-    padding:100px 8%;
+  /* Different background from Home */
+  background:
+    radial-gradient(circle at 10% 20%, rgba(108, 66, 255, 0.35), transparent 30%),
+    radial-gradient(circle at 90% 80%, rgba(255, 193, 7, 0.15), transparent 30%),
+    linear-gradient(135deg, #09091a, #15102e 55%, #21134f);
 
-    text-align:center;
-
+  color: white;
 }
 
-.section-title h2{
+/* Decorative glow */
 
-    font-size:45px;
+.courses::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: -120px;
+  left: -100px;
 
-    color:#FFD700;
-
-    margin-bottom:15px;
-
+  background: rgba(106, 61, 255, 0.25);
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
 }
 
-.section-title p{
+.courses::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  bottom: -120px;
+  right: -80px;
 
-    max-width:700px;
-
-    margin:auto;
-
-    font-size:19px;
-
-    line-height:1.8;
-
-    margin-bottom:60px;
-
+  background: rgba(255, 193, 7, 0.14);
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
 }
 
-/* GRID */
+/* =====================================================
+   SECTION TITLE
+===================================================== */
 
-.courses-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
+.section-title {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 65px;
 }
 
-/* CARD */
+.section-title h2 {
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 800;
+  margin: 0 0 18px;
 
-.course-card{
+  background: linear-gradient(
+    90deg,
+    #ffd700,
+    #ffb300,
+    #ffd700
+  );
 
-    background:rgba(255,255,255,.12);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
-    backdrop-filter:blur(15px);
-
-    border-radius:22px;
-
-    padding:35px;
-
-    transition:.35s;
-
-    cursor:pointer;
-
-    border:1px solid rgba(255,255,255,.15);
-
+  letter-spacing: -1px;
 }
 
-.course-card:hover{
+.section-title p {
+  max-width: 720px;
+  margin: auto;
 
-    transform:translateY(-10px);
-
-    box-shadow:0 15px 35px rgba(0,0,0,.35);
-
+  color: #d8d6e8;
+  font-size: 19px;
+  line-height: 1.8;
 }
 
-.course-icon{
+/* =====================================================
+   COURSES GRID
+===================================================== */
 
-    font-size:55px;
+.courses-grid {
+  position: relative;
+  z-index: 2;
 
-    margin-bottom:20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
 
+  max-width: 1250px;
+  margin: auto;
 }
 
-.course-card h3{
+/* =====================================================
+   COURSE CARD
+===================================================== */
 
-    color:#FFD700;
+.course-card {
+  position: relative;
 
-    margin-bottom:15px;
+  padding: 38px 30px;
 
-    font-size:28px;
+  min-height: 300px;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.11),
+    rgba(255, 255, 255, 0.035)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 26px;
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
-.course-card p{
+/* Card glow */
 
-    color:white;
+.course-card::before {
+  content: "";
 
-    line-height:1.8;
+  position: absolute;
+  width: 180px;
+  height: 180px;
 
-    min-height:45px;
+  top: -90px;
+  right: -90px;
 
+  background: rgba(255, 215, 0, 0.12);
+
+  border-radius: 50%;
+  filter: blur(35px);
+
+  transition: 0.4s;
 }
 
-.course-card button{
-
-    margin-top:25px;
-
-    padding:14px 30px;
-
-    border:none;
-
-    border-radius:40px;
-
-    background:#ff9800;
-
-    color:white;
-
-    font-size:16px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
+.course-card:hover::before {
+  transform: scale(1.5);
 }
 
-.course-card button:hover{
+/* Hover */
 
-    background:#ff6f00;
+.course-card:hover {
+  transform: translateY(-12px);
 
+  border-color: rgba(255, 215, 0, 0.55);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.45),
+    0 0 25px rgba(255, 215, 0, 0.08);
 }
 
-.animated-text{
+/* =====================================================
+   ICON
+===================================================== */
 
-    animation:fadeText .5s ease;
+.course-icon {
+  position: relative;
+  z-index: 2;
 
+  width: 85px;
+  height: 85px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 22px;
+
+  font-size: 48px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border: 1px solid rgba(255, 215, 0, 0.2);
+
+  border-radius: 22px;
+
+  transition: 0.35s;
 }
 
-@keyframes fadeText{
+.course-card:hover .course-icon {
+  transform: scale(1.08) rotate(-4deg);
 
-    from{
+  background: rgba(255, 215, 0, 0.1);
 
-        opacity:0;
-
-        transform:translateY(10px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
+  border-color: rgba(255, 215, 0, 0.5);
 }
 
-/* ================= TABLET ================= */
+/* =====================================================
+   TITLE
+===================================================== */
 
-@media(max-width:992px){
+.course-card h3 {
+  position: relative;
+  z-index: 2;
 
-.courses-grid{
+  color: #ffd700;
 
-grid-template-columns:repeat(2,1fr);
+  font-size: 27px;
+  font-weight: 750;
 
+  margin: 0 0 14px;
 }
 
+/* =====================================================
+   ANIMATED TEXT
+===================================================== */
+
+.course-card p {
+  position: relative;
+  z-index: 2;
+
+  color: #e7e5ef;
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  min-height: 55px;
+
+  margin: 0;
+
+  max-width: 290px;
 }
 
-/* ================= MOBILE ================= */
+.animated-text {
+  animation: fadeText 0.5s ease;
+}
 
-/* ================= MOBILE ================= */
-
-@media(max-width:768px){
-
-  .courses{
-    padding:70px 20px;
+@keyframes fadeText {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
   }
 
-  .section-title h2{
-    font-size:34px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================================================
+   LEARN MORE BUTTON
+===================================================== */
+
+.course-card button {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 25px;
+
+  padding: 13px 28px;
+
+  border: none;
+  border-radius: 50px;
+
+  background: linear-gradient(
+    135deg,
+    #ffd700,
+    #ff9800
+  );
+
+  color: #17121f;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(255, 152, 0, 0.22);
+
+  transition: 0.3s;
+}
+
+.course-card button:hover {
+  transform: translateY(-3px) scale(1.03);
+
+  box-shadow:
+    0 12px 28px rgba(255, 193, 7, 0.3);
+}
+
+/* =====================================================
+   COURSE POPUP
+===================================================== */
+
+.course-popup {
+  position: fixed;
+  inset: 0;
+
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(3, 3, 12, 0.88);
+
+  backdrop-filter: blur(10px);
+
+  animation: popupBackground 0.25s ease;
+}
+
+.course-popup-content {
+  position: relative;
+
+  width: 100%;
+  max-width: 620px;
+
+  padding: 45px 40px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(255, 215, 0, 0.08),
+      transparent 35%
+    ),
+    linear-gradient(
+      145deg,
+      #111020,
+      #1c1640
+    );
+
+  border: 1px solid rgba(255, 215, 0, 0.3);
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.7);
+
+  animation: coursePopup 0.3s ease;
+}
+
+.course-popup-icon {
+  font-size: 65px;
+  margin-bottom: 15px;
+}
+
+.course-popup-content h2 {
+  color: #ffd700;
+
+  font-size: 32px;
+
+  margin: 0 0 18px;
+}
+
+.course-popup-content p {
+  color: #e4e2ec;
+
+  font-size: 17px;
+  line-height: 1.8;
+
+  margin: 0 auto;
+
+  max-width: 540px;
+}
+
+/* =====================================================
+   CLOSE BUTTON
+===================================================== */
+
+.course-popup-close {
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  color: #ffd700;
+
+  font-size: 19px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.course-popup-close:hover {
+  background: #ffd700;
+  color: #111020;
+
+  transform: rotate(90deg);
+}
+
+/* =====================================================
+   WHATSAPP BUTTON
+===================================================== */
+
+.course-enquire {
+  margin-top: 28px;
+
+  padding: 14px 28px;
+
+  border: none;
+  border-radius: 50px;
+
+  background: #25d366;
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 22px rgba(37, 211, 102, 0.22);
+
+  transition: 0.3s;
+}
+
+.course-enquire:hover {
+  transform: translateY(-3px);
+
+  background: #1ebe5d;
+
+  box-shadow:
+    0 12px 28px rgba(37, 211, 102, 0.3);
+}
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes coursePopup {
+  from {
+    opacity: 0;
+    transform: scale(0.85) translateY(25px);
   }
 
-  .section-title p{
-    font-size:17px;
-    margin-bottom:40px;
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes popupBackground {
+  from {
+    opacity: 0;
   }
 
-  .courses-grid{
-    grid-template-columns:repeat(2, minmax(0, 1fr));
-    gap:15px;
+  to {
+    opacity: 1;
+  }
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 992px) {
+
+  .courses {
+    padding: 90px 5%;
   }
 
-  .course-card{
-    padding:25px 15px;
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
   }
 
-  .course-icon{
-    font-size:42px;
+  .course-card {
+    padding: 32px 22px;
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .courses {
+    padding: 75px 18px;
   }
 
-  .course-card h3{
-    font-size:20px;
+  .section-title {
+    margin-bottom: 45px;
   }
 
-  .course-card p{
-    font-size:14px;
-    min-height:auto;
+  .section-title h2 {
+    font-size: 36px;
   }
 
-  .course-card button{
-    padding:11px 18px;
-    font-size:14px;
+  .section-title p {
+    font-size: 16px;
+    line-height: 1.7;
   }
 
-}
-/* ================= COURSE POPUP ================= */
+  .courses-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
 
-.course-popup{
-    position:fixed;
-    inset:0;
+  .course-card {
+    min-height: 270px;
 
-    background:rgba(0,0,0,.88);
+    padding: 30px 22px;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    border-radius: 22px;
+  }
 
-    padding:20px;
+  .course-icon {
+    width: 72px;
+    height: 72px;
 
-    z-index:9999;
-}
+    font-size: 40px;
+  }
 
-.course-popup-content{
-    position:relative;
+  .course-card h3 {
+    font-size: 24px;
+  }
 
-    width:90%;
-    max-width:600px;
+  .course-card p {
+    font-size: 15px;
+  }
 
-    background:linear-gradient(145deg,#0b0b14,#17172a);
+  .course-card button {
+    padding: 12px 25px;
+  }
 
-    border:1px solid rgba(255,215,0,.35);
+  .course-popup {
+    padding: 15px;
+  }
 
-    border-radius:25px;
+  .course-popup-content {
+    padding: 40px 22px 30px;
+    border-radius: 22px;
+  }
 
-    padding:40px 30px;
+  .course-popup-icon {
+    font-size: 52px;
+  }
 
-    text-align:center;
+  .course-popup-content h2 {
+    font-size: 25px;
+  }
 
-    box-shadow:
-        0 0 30px rgba(0,0,0,.7),
-        0 0 60px rgba(255,215,0,.08);
-
-    animation:coursePopup .3s ease;
-}
-
-.course-popup-icon{
-    font-size:65px;
-    margin-bottom:15px;
-}
-
-.course-popup-content h2{
-    color:#FFD700;
-    font-size:30px;
-    margin-bottom:18px;
-}
-
-.course-popup-content p{
-    color:#e5e5e5;
-    font-size:17px;
-    line-height:1.8;
+  .course-popup-content p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
 }
 
-.course-popup-close{
-    position:absolute;
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
 
-    top:-15px;
-    right:-15px;
+@media (max-width: 400px) {
 
-    width:45px;
-    height:45px;
+  .courses {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
 
-    border:none;
-    border-radius:50%;
+  .section-title h2 {
+    font-size: 32px;
+  }
 
-    background:#11111d;
-    color:#FFD700;
+  .course-card {
+    padding: 28px 18px;
+  }
 
-    font-size:20px;
-
-    cursor:pointer;
-
-    transition:.3s;
-}
-
-.course-popup-close:hover{
-    background:#FFD700;
-    color:#11111d;
-    transform:rotate(90deg) scale(1.08);
-}
-
-.course-enquire{
-    margin-top:25px;
-
-    padding:13px 25px;
-
-    border:none;
-    border-radius:30px;
-
-    background:#25D366;
-    color:white;
-
-    font-size:15px;
-    font-weight:bold;
-
-    cursor:pointer;
-
-    transition:.3s;
-}
-
-.course-enquire:hover{
-    background:#1ebc59;
-    transform:translateY(-3px);
-}
-
-@keyframes coursePopup{
-
-    from{
-        opacity:0;
-        transform:scale(.8) translateY(20px);
-    }
-
-    to{
-        opacity:1;
-        transform:scale(1) translateY(0);
-    }
-
-}
-
-@media(max-width:768px){
-
-    .course-popup-content{
-        width:92%;
-        padding:30px 20px;
-        border-radius:20px;
-    }
-
-    .course-popup-icon{
-        font-size:50px;
-    }
-
-    .course-popup-content h2{
-        font-size:24px;
-    }
-
-    .course-popup-content p{
-        font-size:15px;
-    }
-
+  .course-card h3 {
+    font-size: 22px;
+  }
 }

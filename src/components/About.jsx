@@ -4,6 +4,8 @@ function About() {
   return (
     <section className="about" id="about">
 
+      {/* ================= LEFT CONTENT ================= */}
+
       <div className="about-left">
 
         <span className="about-tag">
@@ -28,41 +30,65 @@ function About() {
           concepts.
         </p>
 
+        {/* ================= HIGHLIGHTS ================= */}
+
         <div className="about-highlights">
 
           <div className="about-highlight">
             <span>💻</span>
+
             <div>
               <h3>Practical Learning</h3>
-              <p>Learn by building real-world projects.</p>
+
+              <p>
+                Learn by building real-world projects.
+              </p>
             </div>
           </div>
+
 
           <div className="about-highlight">
             <span>🤖</span>
+
             <div>
               <h3>Future Skills</h3>
-              <p>Coding, AI, Robotics & modern technology.</p>
+
+              <p>
+                Coding, AI, Robotics & modern technology.
+              </p>
             </div>
           </div>
+
 
           <div className="about-highlight">
             <span>👩‍🏫</span>
+
             <div>
               <h3>Personal Guidance</h3>
-              <p>Interactive classes with individual attention.</p>
+
+              <p>
+                Interactive classes with individual attention.
+              </p>
             </div>
           </div>
 
+
           <div className="about-highlight">
             <span>🏆</span>
+
             <div>
               <h3>Achievement Focused</h3>
-              <p>Projects, certificates and confidence building.</p>
+
+              <p>
+                Projects, certificates and confidence building.
+              </p>
             </div>
           </div>
 
         </div>
+
+
+        {/* ================= BUTTON ================= */}
 
         <a
           href="https://wa.me/916367975699?text=Hi%20Khushi!%20I%20want%20to%20know%20more%20about%20CodeWithKhushi."
@@ -75,52 +101,82 @@ function About() {
 
       </div>
 
+
+      {/* ================= RIGHT PROFILE CARD ================= */}
+
       <div className="about-right">
 
         <div className="about-card">
 
+          {/* PROFILE */}
+
           <div className="about-card-top">
+
             <div className="about-avatar">
               👩‍💻
             </div>
 
             <div>
               <h3>Khushi Chauhan</h3>
-              <p>Founder • CodeWithKhushi</p>
+
+              <p>
+                Founder • CodeWithKhushi
+              </p>
             </div>
+
           </div>
 
+
+          {/* QUOTE */}
+
           <div className="about-quote">
+
             <span>“</span>
+
             <p>
               Learn technology by creating, experimenting and
               building something of your own.
             </p>
+
           </div>
+
+
+          {/* ================= GOALS ================= */}
+
+          <h3 className="goals-title">
+            🎯 Our Goals
+          </h3>
+
 
           <div className="about-stats">
 
             <div>
               <strong>500+</strong>
-              <span>Students</span>
+              <span>Target Students</span>
             </div>
+
 
             <div>
               <strong>50+</strong>
-              <span>Projects</span>
+              <span>Target Projects</span>
             </div>
+
 
             <div>
               <strong>100%</strong>
-              <span>Practical</span>
+              <span>Practical Learning</span>
             </div>
+
 
             <div>
               <strong>2+</strong>
-              <span>Awards</span>
+              <span>Target Recognitions</span>
             </div>
 
           </div>
+
+
+          {/* CARD FOOTER */}
 
           <div className="about-card-footer">
             🚀 Coding • AI • Robotics • Web Development

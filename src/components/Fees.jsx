@@ -1,107 +1,181 @@
 import "../styles/Fees.css";
 
 function Fees() {
+  const feesPlans = [
+    {
+      icon: "💻",
+      title: "C & C++",
+      price: "3,500",
+      duration: "3 Months Course",
+      features: [
+        "✔ Live Classes",
+        "✔ Practical Projects",
+        "✔ Notes & Assignments",
+        "✔ Doubt Support",
+        "✔ Certificate",
+      ],
+    },
+
+    {
+      icon: "🐍",
+      title: "Python",
+      price: "4,500",
+      duration: "3 Months Course",
+      popular: true,
+      features: [
+        "✔ Live Classes",
+        "✔ Mini Projects",
+        "✔ Python Applications",
+        "✔ AI Basics",
+        "✔ Doubt Support",
+        "✔ Certificate",
+      ],
+    },
+
+    {
+      icon: "🌐",
+      title: "Web Development",
+      price: "4,500",
+      duration: "3 Months Course",
+      features: [
+        "✔ HTML & CSS",
+        "✔ JavaScript",
+        "✔ Responsive Websites",
+        "✔ React Basics",
+        "✔ Practical Projects",
+        "✔ Certificate",
+      ],
+    },
+
+    {
+      icon: "🤖",
+      title: "AI & Robotics",
+      price: "5,500",
+      duration: "3 Months Course",
+      features: [
+        "✔ AI Fundamentals",
+        "✔ Robotics Basics",
+        "✔ Practical Projects",
+        "✔ Hands-on Learning",
+        "✔ Doubt Support",
+        "✔ Certificate",
+      ],
+    },
+
+    {
+      icon: "🎮",
+      title: "Scratch Coding",
+      price: "3,000",
+      duration: "3 Months Course",
+      features: [
+        "✔ Logic Building",
+        "✔ Game Development",
+        "✔ Animation Projects",
+        "✔ Creative Activities",
+        "✔ Practical Learning",
+        "✔ Certificate",
+      ],
+    },
+
+    {
+      icon: "📚",
+      title: "Academic Subjects",
+      price: "1,000",
+      duration: "Per Month",
+      features: [
+        "✔ Mathematics",
+        "✔ Science",
+        "✔ Computer",
+        "✔ Social Science",
+        "✔ Weekly Tests",
+        "✔ Doubt Support",
+      ],
+    },
+  ];
+
   return (
     <section className="fees" id="fees">
 
       <div className="fees-header">
 
-        <h2>💰 Affordable Fees</h2>
+        <span className="fees-badge">
+          💎 AFFORDABLE PROGRAMS
+        </span>
+
+        <h2>💰 Course Fees</h2>
 
         <p>
-          Quality education at affordable prices.
-          Choose the course that suits you best.
+          Quality education with practical learning,
+          personal guidance and project-based classes.
         </p>
 
       </div>
 
       <div className="fees-grid">
 
-        <div className="fees-card">
+        {feesPlans.map((plan) => (
+          <div
+            className={`fees-card ${
+              plan.popular ? "popular" : ""
+            }`}
+            key={plan.title}
+          >
 
-          <h3>💻 C & C++</h3>
+            {plan.popular && (
+              <div className="badge">
+                ⭐ Most Popular
+              </div>
+            )}
 
-          <h1>
-            ₹600 <span>/month</span>
-          </h1>
+            <div className="fees-icon">
+              {plan.icon}
+            </div>
 
-          <ul>
-            <li>✔ Live Classes</li>
-            <li>✔ Practical Projects</li>
-            <li>✔ Notes & Assignments</li>
-            <li>✔ Doubt Support</li>
-          </ul>
+            <h3>{plan.title}</h3>
 
-        </div>
+            <div className="price">
+              <span className="currency">₹</span>
+              {plan.price}
+            </div>
 
-        <div className="fees-card popular">
+            <div className="duration">
+              {plan.duration}
+            </div>
 
-          <div className="badge">
-            Most Popular
+            <ul>
+              {plan.features.map((feature, index) => (
+                <li key={index}>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+
+            <button
+              onClick={() =>
+                window.open(
+                  `https://wa.me/916367975699?text=Hi%20Khushi!%20I%20want%20to%20enquire%20about%20the%20${encodeURIComponent(
+                    plan.title
+                  )}%20course%20at%20₹${encodeURIComponent(
+                    plan.price
+                  )}%20${encodeURIComponent(
+                    plan.duration
+                  )}.`,
+                  "_blank"
+                )
+              }
+            >
+              Enquire Now →
+            </button>
+
           </div>
-
-          <h3>🐍 Python</h3>
-
-          <h1>
-            ₹700 <span>/month</span>
-          </h1>
-
-          <ul>
-            <li>✔ Live Classes</li>
-            <li>✔ Mini Projects</li>
-            <li>✔ AI Basics</li>
-            <li>✔ Certificate</li>
-          </ul>
-
-        </div>
-
-        <div className="fees-card">
-
-          <h3>🌐 Web Development</h3>
-
-          <h1>
-            ₹800 <span>/month</span>
-          </h1>
-
-          <ul>
-            <li>✔ HTML</li>
-            <li>✔ CSS</li>
-            <li>✔ JavaScript</li>
-            <li>✔ React Basics</li>
-          </ul>
-
-        </div>
-
-        <div className="fees-card">
-
-          <h3>📚 Academic Subjects</h3>
-
-          <h1>
-            ₹600 <span>/month</span>
-          </h1>
-
-          <ul>
-            <li>✔ Maths</li>
-            <li>✔ Science</li>
-            <li>✔ English</li>
-            <li>✔ Social Science</li>
-          </ul>
-
-        </div>
+        ))}
 
       </div>
 
-      <button
-        className="fees-btn"
-        onClick={() =>
-          window.open(
-            "https://wa.me/916367975699?text=Hi%20Khushi!%20I%20want%20to%20know%20about%20your%20fees.",
-            "_blank"
-          )
-        }
-      >
-        Enquire About Fees
-      </button>
+      <div className="fees-note">
+        🎓 Coding Courses: 3 Months • Academic Subjects: ₹1,000/month
+        • Live Classes • Practical Learning • Doubt Support
+      </div>
 
     </section>
   );

@@ -1,0 +1,514 @@
+/* ================= PROJECT HERO ================= */
+
+.project-hero {
+  position: relative;
+
+  min-height: 620px;
+
+  padding: 100px 8%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 60px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 15% 30%,
+      rgba(108, 66, 255, 0.3),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 70%,
+      rgba(255, 193, 7, 0.15),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #080817,
+      #171031,
+      #291450
+    );
+
+  color: white;
+}
+
+/* ================= CONTENT ================= */
+
+.project-hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 650px;
+}
+
+.project-hero-badge {
+  display: inline-block;
+
+  margin-bottom: 22px;
+
+  padding: 10px 18px;
+
+  border: 1px solid rgba(255, 215, 0, 0.3);
+
+  border-radius: 50px;
+
+  background: rgba(255, 215, 0, 0.08);
+
+  color: #ffd700;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.project-hero h1 {
+  margin: 0;
+
+  font-size: clamp(55px, 7vw, 82px);
+
+  line-height: 1;
+
+  font-weight: 800;
+}
+
+.project-hero h1 span {
+  color: #ffd700;
+
+  text-shadow:
+    0 0 25px rgba(255, 215, 0, 0.15);
+}
+
+.project-hero-content > p {
+  max-width: 620px;
+
+  margin: 28px 0;
+
+  color: #d8d5e4;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+}
+
+/* ================= BUTTONS ================= */
+
+.project-hero-buttons {
+  display: flex;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+}
+
+.project-hero-buttons a {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 14px 27px;
+
+  border-radius: 50px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffd700,
+      #ff9800
+    );
+
+  color: #17121f;
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  transition: 0.3s;
+}
+
+.project-hero-buttons a:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 12px 30px rgba(255, 174, 0, 0.25);
+}
+
+.project-hero-buttons .project-whatsapp {
+  background: transparent;
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  color: white;
+}
+
+.project-hero-buttons .project-whatsapp:hover {
+  border-color: #25d366;
+
+  color: #25d366;
+
+  box-shadow: none;
+}
+
+/* ================= VISUAL ================= */
+
+.project-hero-visual {
+  position: relative;
+
+  width: 440px;
+
+  height: 440px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  z-index: 2;
+}
+
+/* ================= LAB CARD ================= */
+
+.project-lab-card {
+  width: 320px;
+
+  border-radius: 25px;
+
+  background: rgba(9, 9, 22, 0.9);
+
+  border: 1px solid rgba(255, 215, 0, 0.25);
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.55),
+    0 0 40px rgba(108, 66, 255, 0.12);
+
+  backdrop-filter: blur(15px);
+
+  transform: rotate(-3deg);
+
+  animation: labFloat 4s ease-in-out infinite;
+}
+
+/* ================= LAB TOP ================= */
+
+.lab-top {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 15px 18px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: #aaa7b8;
+
+  font-family: monospace;
+
+  font-size: 13px;
+}
+
+.lab-dots {
+  display: flex;
+
+  gap: 6px;
+}
+
+.lab-dots span {
+  width: 9px;
+
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #555;
+}
+
+/* ================= CODE ================= */
+
+.lab-code {
+  padding: 30px;
+
+  text-align: left;
+
+  font-family: monospace;
+
+  font-size: 17px;
+
+  line-height: 1.9;
+}
+
+.lab-code p {
+  margin: 5px 0;
+
+  color: #e5e3ed;
+}
+
+.code-indent {
+  padding-left: 25px;
+}
+
+.code-purple {
+  color: #b39cff;
+}
+
+.code-yellow {
+  color: #ffd700;
+}
+
+.code-success {
+  margin-top: 20px !important;
+
+  color: #6ee7a0 !important;
+}
+
+/* ================= FLOATING ICONS ================= */
+
+.project-floating-icon {
+  position: absolute;
+
+  width: 70px;
+
+  height: 70px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  backdrop-filter: blur(12px);
+
+  font-size: 34px;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.icon-one {
+  top: 20px;
+
+  left: 25px;
+
+  animation: floatOne 4s ease-in-out infinite;
+}
+
+.icon-two {
+  top: 110px;
+
+  right: 0;
+
+  animation: floatTwo 4.5s ease-in-out infinite;
+}
+
+.icon-three {
+  bottom: 25px;
+
+  left: 35px;
+
+  animation: floatThree 4.2s ease-in-out infinite;
+}
+
+.icon-four {
+  bottom: 55px;
+
+  right: 15px;
+
+  animation: floatFour 4.7s ease-in-out infinite;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes labFloat {
+  0%,
+  100% {
+    transform: rotate(-3deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(-3deg) translateY(-12px);
+  }
+}
+
+@keyframes floatOne {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes floatTwo {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(12px);
+  }
+}
+
+@keyframes floatThree {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes floatFour {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(13px);
+  }
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 992px) {
+  .project-hero {
+    padding: 90px 5%;
+
+    gap: 30px;
+  }
+
+  .project-hero h1 {
+    font-size: 58px;
+  }
+
+  .project-hero-visual {
+    width: 350px;
+
+    height: 350px;
+  }
+
+  .project-lab-card {
+    width: 250px;
+  }
+
+  .lab-code {
+    padding: 24px;
+
+    font-size: 14px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .project-hero {
+    min-height: auto;
+
+    padding: 75px 20px;
+
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .project-hero-content {
+    max-width: 100%;
+  }
+
+  .project-hero-badge {
+    font-size: 11px;
+  }
+
+  .project-hero h1 {
+    font-size: 48px;
+  }
+
+  .project-hero-content > p {
+    font-size: 16px;
+
+    line-height: 1.7;
+  }
+
+  .project-hero-buttons {
+    justify-content: center;
+  }
+
+  .project-hero-buttons a {
+    padding: 13px 21px;
+
+    font-size: 14px;
+  }
+
+  .project-hero-visual {
+    width: 310px;
+
+    height: 310px;
+  }
+
+  .project-lab-card {
+    width: 220px;
+  }
+
+  .lab-code {
+    padding: 22px;
+
+    font-size: 13px;
+  }
+
+  .project-floating-icon {
+    width: 55px;
+
+    height: 55px;
+
+    font-size: 27px;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 400px) {
+  .project-hero h1 {
+    font-size: 42px;
+  }
+
+  .project-hero-visual {
+    width: 280px;
+
+    height: 280px;
+  }
+
+  .project-lab-card {
+    width: 195px;
+  }
+
+  .lab-code {
+    padding: 18px;
+
+    font-size: 11px;
+  }
+}

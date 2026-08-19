@@ -1,241 +1,400 @@
 /* ================= FEES ================= */
 
-.fees{
+.fees {
+  position: relative;
+  padding: 110px 7%;
+  text-align: center;
+  overflow: hidden;
 
-    padding:100px 8%;
-
-    background:linear-gradient(135deg,#141E30,#243B55);
-
-    text-align:center;
-
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(74, 144, 226, 0.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(255, 193, 7, 0.12),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #080d18,
+      #12233b,
+      #172f4d
+    );
 }
 
-.fees-header h2{
+/* ================= HEADER ================= */
 
-    font-size:45px;
-
-    color:#FFD700;
-
-    margin-bottom:15px;
-
+.fees-header {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 60px;
 }
 
-.fees-header p{
+.fees-badge {
+  display: inline-block;
 
-    max-width:700px;
+  margin-bottom: 18px;
+  padding: 9px 18px;
 
-    margin:auto;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 50px;
 
-    font-size:19px;
+  background: rgba(255, 215, 0, 0.08);
 
-    line-height:1.8;
+  color: #ffd700;
 
-    margin-bottom:60px;
-
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
-/* GRID */
+.fees-header h2 {
+  margin: 0 0 15px;
 
-.fees-grid{
+  font-size: clamp(38px, 5vw, 55px);
+  font-weight: 800;
 
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:30px;
-
+  color: #ffd700;
 }
 
-/* CARD */
+.fees-header p {
+  max-width: 720px;
 
-.fees-card{
+  margin: auto;
 
-    position:relative;
+  color: #d7dce5;
 
-    background:rgba(255,255,255,.12);
-
-    backdrop-filter:blur(12px);
-
-    border-radius:22px;
-
-    padding:35px;
-
-    transition:.35s;
-
+  font-size: 18px;
+  line-height: 1.8;
 }
 
-.fees-card:hover{
+/* ================= GRID ================= */
 
-    transform:translateY(-10px);
+.fees-grid {
+  position: relative;
+  z-index: 2;
 
-    box-shadow:0 18px 35px rgba(0,0,0,.35);
+  display: grid;
 
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+
+  max-width: 1250px;
+  margin: auto;
 }
 
-.fees-card h3{
+/* ================= CARD ================= */
 
-    color:#FFD700;
+.fees-card {
+  position: relative;
 
-    margin-bottom:15px;
+  padding: 38px 25px;
 
-    font-size:28px;
+  min-height: 430px;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.12),
+      rgba(255, 255, 255, 0.045)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.13);
+
+  border-radius: 25px;
+
+  backdrop-filter: blur(15px);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
 }
 
-.fees-card h1{
+.fees-card:hover {
+  transform: translateY(-10px);
 
-    font-size:42px;
+  border-color: rgba(255, 215, 0, 0.45);
 
-    margin-bottom:25px;
-
+  box-shadow:
+    0 22px 50px rgba(0, 0, 0, 0.4);
 }
 
-.fees-card h1 span{
+/* ================= POPULAR ================= */
 
-    font-size:18px;
+.fees-card.popular {
+  border: 2px solid #ffd700;
 
+  box-shadow:
+    0 0 30px rgba(255, 215, 0, 0.1);
 }
 
-.fees-card ul{
+.badge {
+  position: absolute;
 
-    list-style:none;
+  top: -14px;
+  right: 18px;
 
-    padding:0;
+  padding: 7px 15px;
 
+  border-radius: 50px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffd700,
+      #ff9800
+    );
+
+  color: #17121f;
+
+  font-size: 12px;
+  font-weight: 800;
 }
 
-.fees-card li{
+/* ================= ICON ================= */
 
-    margin:12px 0;
+.fees-icon {
+  width: 75px;
+  height: 75px;
 
-    line-height:1.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  margin-bottom: 20px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border: 1px solid rgba(255, 215, 0, 0.2);
+
+  font-size: 42px;
+
+  transition: 0.3s;
 }
 
-.badge{
-
-    position:absolute;
-
-    top:-12px;
-
-    right:18px;
-
-    background:#ff9800;
-
-    color:white;
-
-    padding:7px 16px;
-
-    border-radius:25px;
-
-    font-size:13px;
-
-    font-weight:bold;
-
+.fees-card:hover .fees-icon {
+  transform: scale(1.08);
 }
 
-.popular{
+/* ================= TITLE ================= */
 
-    border:2px solid #FFD700;
+.fees-card h3 {
+  margin: 0 0 16px;
 
+  color: #ffd700;
+
+  font-size: 25px;
+  font-weight: 700;
 }
 
-.fees-btn{
+/* ================= PRICE ================= */
 
-    margin-top:50px;
+.price {
+  color: white;
 
-    padding:16px 40px;
+  font-size: 48px;
+  font-weight: 800;
 
-    border:none;
+  line-height: 1;
 
-    border-radius:40px;
-
-    background:#ff9800;
-
-    color:white;
-
-    font-size:18px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
+  margin-bottom: 10px;
 }
 
-.fees-btn:hover{
+.currency {
+  color: #ffd700;
 
-    background:#ff6f00;
+  font-size: 30px;
 
+  margin-right: 3px;
+}
+
+.duration {
+  margin-bottom: 25px;
+
+  color: #bfc5d2;
+
+  font-size: 14px;
+}
+
+/* ================= FEATURES ================= */
+
+.fees-card ul {
+  width: 100%;
+
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+
+  text-align: left;
+}
+
+.fees-card li {
+  padding: 9px 0;
+
+  color: #e4e7ed;
+
+  font-size: 14px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.fees-card li:last-child {
+  border-bottom: none;
+}
+
+/* ================= BUTTON ================= */
+
+.fees-card button {
+  margin-top: auto;
+
+  padding: 13px 25px;
+
+  border: none;
+  border-radius: 50px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffd700,
+      #ff9800
+    );
+
+  color: #17121f;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.fees-card button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(255, 174, 0, 0.25);
+}
+
+/* ================= BOTTOM NOTE ================= */
+
+.fees-note {
+  position: relative;
+  z-index: 2;
+
+  max-width: 900px;
+
+  margin: 55px auto 0;
+
+  padding: 18px 25px;
+
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border: 1px solid rgba(255, 215, 0, 0.18);
+
+  color: #dfe3eb;
+
+  font-size: 15px;
+}
+
+.fees-note strong {
+  color: #ffd700;
 }
 
 /* ================= TABLET ================= */
 
-@media(max-width:992px){
-
-.fees-grid{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
+@media (max-width: 1100px) {
+  .fees-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ================= MOBILE ================= */
 
-/* ================= MOBILE ================= */
-
-@media(max-width:768px){
-
-  .fees{
-    padding:70px 20px;
+@media (max-width: 768px) {
+  .fees {
+    padding: 75px 18px;
   }
 
-  .fees h2{
-    font-size:34px;
+  .fees-header {
+    margin-bottom: 45px;
   }
 
-  .fees-text{
-    font-size:16px;
-    line-height:1.7;
-    margin-bottom:40px;
+  .fees-header h2 {
+    font-size: 34px;
   }
 
-  .fees-cards{
-    grid-template-columns:repeat(2, minmax(0, 1fr));
-    gap:15px;
+  .fees-header p {
+    font-size: 16px;
   }
 
-  .fees-card{
-    padding:25px 15px;
-    border-radius:18px;
+  .fees-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
   }
 
-  .fees-card h3{
-    font-size:19px;
+  .fees-card {
+    min-height: 400px;
+
+    padding: 32px 22px;
+
+    border-radius: 22px;
   }
 
-  .fees-card h1{
-    font-size:30px;
+  .fees-card h3 {
+    font-size: 23px;
   }
 
-  .fees-card h1 span{
-    font-size:14px;
+  .price {
+    font-size: 44px;
   }
 
-  .fees-card p{
-    font-size:14px;
-    line-height:1.6;
+  .fees-note {
+    border-radius: 20px;
+
+    padding: 18px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 400px) {
+  .fees {
+    padding-left: 14px;
+    padding-right: 14px;
   }
 
-  .badge{
-    top:-8px;
-    right:8px;
-    padding:6px 9px;
-    font-size:10px;
+  .fees-card {
+    padding: 28px 18px;
   }
 
-  .fees .primary{
-    margin-top:30px;
+  .fees-card h3 {
+    font-size: 21px;
   }
 
+  .price {
+    font-size: 40px;
+  }
 }
