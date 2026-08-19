@@ -4,6 +4,7 @@ import CourseHero from "./components/CourseHero";
 import ProjectHero from "./components/ProjectHero";
 import FAQHero from "./components/FAQHero";
 import ContactHero from "./components/ContactHero";
+import AIHero from "./components/AIHero";
 import PageNavigation from "./components/PageNavigation";
 
 import Navbar from "./components/Navbar";
@@ -194,6 +195,8 @@ function ContactPage() {
 function AIPage() {
   return (
     <>
+      <AIHero />
+
       <AIChat />
 
       <PageNavigation

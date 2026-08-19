@@ -1,0 +1,413 @@
+/* ================= AI HERO ================= */
+
+.ai-hero {
+  min-height: 560px;
+
+  padding: 90px 8%;
+
+  display: grid;
+
+  grid-template-columns: 1.1fr 0.9fr;
+
+  align-items: center;
+
+  gap: 50px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 15% 30%,
+      rgba(124, 58, 237, 0.3),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 50%,
+      rgba(255, 215, 0, 0.1),
+      transparent 35%
+    ),
+    #0b0b14;
+}
+
+/* ================= CONTENT ================= */
+
+.ai-hero-content {
+  max-width: 700px;
+}
+
+.ai-hero-tag {
+  display: inline-block;
+
+  color: #ffd700;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 18px;
+}
+
+.ai-hero-content h1 {
+  color: white;
+
+  font-size: 58px;
+
+  line-height: 1.15;
+
+  margin-bottom: 25px;
+}
+
+.ai-hero-content h1 span {
+  display: block;
+
+  color: #ffd700;
+}
+
+.ai-hero-content > p {
+  color: #cfcfcf;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+
+  max-width: 650px;
+
+  margin-bottom: 30px;
+}
+
+/* ================= POINTS ================= */
+
+.ai-hero-points {
+  display: flex;
+
+  gap: 15px;
+
+  margin-bottom: 35px;
+}
+
+.ai-hero-points div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 10px 15px;
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ai-hero-points span {
+  font-size: 20px;
+}
+
+.ai-hero-points p {
+  color: white;
+
+  font-size: 13px;
+
+  margin: 0;
+}
+
+/* ================= BUTTON ================= */
+
+.ai-hero-btn {
+  border: none;
+
+  padding: 15px 30px;
+
+  border-radius: 40px;
+
+  background: linear-gradient(
+    135deg,
+    #ff9800,
+    #ff6f00
+  );
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.ai-hero-btn:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 12px 30px rgba(255, 152, 0, 0.3);
+}
+
+/* ================= AI VISUAL ================= */
+
+.ai-hero-visual {
+  position: relative;
+
+  min-height: 430px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.ai-robot {
+  width: 190px;
+
+  height: 190px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-size: 95px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #252542,
+      #11111d
+    );
+
+  border: 2px solid rgba(255, 215, 0, 0.35);
+
+  box-shadow:
+    0 0 40px rgba(255, 215, 0, 0.12),
+    0 25px 60px rgba(0, 0, 0, 0.5);
+
+  z-index: 2;
+
+  animation: aiFloat 4s ease-in-out infinite;
+}
+
+/* ================= ORBITS ================= */
+
+.ai-orbit {
+  position: absolute;
+
+  border: 1px solid rgba(255, 215, 0, 0.18);
+
+  border-radius: 50%;
+
+  transform: rotate(-20deg);
+}
+
+.orbit-one {
+  width: 330px;
+
+  height: 170px;
+}
+
+.orbit-two {
+  width: 400px;
+
+  height: 220px;
+
+  transform: rotate(35deg);
+
+  border-color: rgba(124, 58, 237, 0.3);
+}
+
+/* ================= FLOATING CARDS ================= */
+
+.ai-floating-card {
+  position: absolute;
+
+  padding: 12px 18px;
+
+  border-radius: 14px;
+
+  color: white;
+
+  font-size: 13px;
+
+  background:
+    rgba(23, 23, 42, 0.9);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.3);
+
+  backdrop-filter: blur(10px);
+
+  z-index: 3;
+}
+
+.card-one {
+  top: 45px;
+
+  left: 5%;
+
+  animation: cardFloat 4s ease-in-out infinite;
+}
+
+.card-two {
+  top: 25%;
+
+  right: 0;
+
+  animation: cardFloat 5s ease-in-out infinite;
+}
+
+.card-three {
+  bottom: 45px;
+
+  left: 12%;
+
+  animation: cardFloat 4.5s ease-in-out infinite;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes aiFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes cardFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 992px) {
+
+  .ai-hero {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    padding: 80px 30px;
+  }
+
+  .ai-hero-content {
+    margin: auto;
+  }
+
+  .ai-hero-content h1 {
+    font-size: 46px;
+  }
+
+  .ai-hero-content > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ai-hero-points {
+    justify-content: center;
+
+    flex-wrap: wrap;
+  }
+
+  .ai-hero-visual {
+    min-height: 350px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .ai-hero {
+    padding: 65px 20px;
+
+    gap: 20px;
+  }
+
+  .ai-hero-content h1 {
+    font-size: 36px;
+  }
+
+  .ai-hero-content > p {
+    font-size: 16px;
+
+    line-height: 1.7;
+  }
+
+  .ai-hero-points {
+    gap: 8px;
+  }
+
+  .ai-hero-points div {
+    padding: 8px 11px;
+  }
+
+  .ai-hero-points p {
+    font-size: 11px;
+  }
+
+  .ai-hero-btn {
+    width: 100%;
+  }
+
+  .ai-hero-visual {
+    min-height: 300px;
+  }
+
+  .ai-robot {
+    width: 140px;
+
+    height: 140px;
+
+    font-size: 70px;
+  }
+
+  .orbit-one {
+    width: 260px;
+
+    height: 135px;
+  }
+
+  .orbit-two {
+    width: 310px;
+
+    height: 170px;
+  }
+
+  .ai-floating-card {
+    font-size: 11px;
+
+    padding: 9px 12px;
+  }
+
+  .card-one {
+    left: 0;
+  }
+
+  .card-two {
+    right: 0;
+  }
+
+  .card-three {
+    bottom: 25px;
+  }
+}
