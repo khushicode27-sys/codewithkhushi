@@ -15,27 +15,29 @@ export default async function handler(req, res) {
     }
 
     const response = await fetch(
-      "https://api.groq.com/openai/v1/chat/completions",
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent",
       {
         method: "POST",
-
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
+          "x-goog-api-key": process.env.GEMINI_API_KEY,
         },
-
         body: JSON.stringify({
-          model: "llama-3.1-8b-instant",
-
-          messages: [
-            {
-              role: "system",
-              content:
-                "You are the friendly AI Assistant for CodeWithKhushi, a Coding, AI and Robotics Academy. Answer questions clearly and simply. Help students with Coding, C, C++, Python, Java, Web Development, Artificial Intelligence, Robotics and Scratch. Keep explanations beginner-friendly.",
-            },
+          systemInstruction: {
+            parts: [
+              {
+                text: "You are the friendly AI Assistant for CodeWithKhushi, a Coding, AI and Robotics Academy. Answer questions clearly and simply. Help students with Coding, C, C++, Python, Java, Web Development, Artificial Intelligence, Robotics and Scratch. Keep explanations beginner-friendly.",
+              },
+            ],
+          },
+          contents: [
             {
               role: "user",
-              content: message,
+              parts: [
+                {
+                  text: message,
+                },
+              ],
             },
           ],
         }),
@@ -45,7 +47,7 @@ export default async function handler(req, res) {
     const data = await response.json();
 
     if (!response.ok) {
-      console.error("Groq API Error:", data);
+      console.error("Gemini API Error:", data);
 
       return res.status(response.status).json({
         reply:
@@ -55,7 +57,7 @@ export default async function handler(req, res) {
     }
 
     const reply =
-      data?.choices?.[0]?.message?.content ||
+      data?.candidates?.[0]?.content?.parts?.[0]?.text ||
       "Sorry, mujhe answer nahi mila.";
 
     return res.status(200).json({
