@@ -218,3 +218,47 @@
   visibility: visible !important;
   white-space: nowrap !important;
 }
+/* ================= MOBILE MENU FIX ================= */
+
+@media (max-width: 1050px) {
+
+  .navbar {
+    position: sticky;
+    width: 100%;
+  }
+
+  .nav-links {
+    position: absolute !important;
+    top: 70px !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    display: none !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+    gap: 20px !important;
+    padding: 25px 0 !important;
+    margin: 0 !important;
+
+    background: #21134f !important;
+
+    box-sizing: border-box !important;
+  }
+
+  .nav-links.active {
+    display: flex !important;
+  }
+
+  .nav-links li {
+    width: auto !important;
+    flex-shrink: 0 !important;
+  }
+
+  .nav-links a {
+    font-size: 18px !important;
+    white-space: nowrap !important;
+  }
+}
