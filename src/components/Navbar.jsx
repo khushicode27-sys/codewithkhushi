@@ -11,6 +11,7 @@ function Navbar() {
 
   const closeMenu = () => {
     setMenuOpen(false);
+
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -22,30 +23,42 @@ function Navbar() {
       name: "Home",
       path: "/",
     },
+
     {
       name: "Courses",
       path: "/courses",
     },
+
+    {
+      name: "Blog",
+      path: "/blog",
+    },
+
     {
       name: "Projects",
       path: "/projects",
     },
+
     {
       name: "About",
       path: "/about",
     },
+
     {
       name: "Testimonials",
       path: "/testimonials",
     },
+
     {
       name: "FAQ",
       path: "/faq",
     },
+
     {
       name: "Contact",
       path: "/contact",
     },
+
     {
       name: "🤖 AI Assistant",
       path: "/ai-assistant",
@@ -55,7 +68,7 @@ function Navbar() {
   return (
     <nav className="navbar">
 
-      {/* LOGO */}
+      {/* ================= LOGO ================= */}
 
       <div className="logo">
 
@@ -66,7 +79,7 @@ function Navbar() {
         >
           <img
             src={logo}
-            alt="CodeWithKhushi Logo"
+            alt="CodeWithKhushi Coding Academy Logo"
             className="logo-img"
           />
         </Link>
@@ -82,17 +95,18 @@ function Navbar() {
       </div>
 
 
-      {/* MOBILE MENU */}
+      {/* ================= MOBILE MENU ================= */}
 
       <div
         className="menu-icon"
         onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle navigation menu"
       >
         {menuOpen ? <FaTimes /> : <FaBars />}
       </div>
 
 
-      {/* NAVIGATION */}
+      {/* ================= NAVIGATION ================= */}
 
       <ul
         className={

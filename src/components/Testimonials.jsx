@@ -33,20 +33,27 @@ function Testimonials() {
   return (
     <section className="testimonials" id="testimonials">
 
+      {/* ================= HEADER ================= */}
+
       <div className="testimonial-header">
 
         <span className="testimonial-tag">
           ⭐ STUDENT FEEDBACK
         </span>
 
-        <h2>💬 What Our Students Say</h2>
+        <h2>
+          💬 What Our Students Say
+        </h2>
 
         <p>
-          Hear from students who have learned Coding, AI & Robotics
-          with CodeWithKhushi.
+          Hear from students about their learning experience with
+          Coding, Python, AI and Robotics at CodeWithKhushi.
         </p>
 
       </div>
+
+
+      {/* ================= TESTIMONIAL GRID ================= */}
 
       <div className="testimonial-grid">
 
@@ -58,7 +65,7 @@ function Testimonials() {
             onClick={() => setSelectedTestimonial(item)}
           >
 
-            <div className="stars">
+            <div className="stars" aria-label="5 star rating">
               ⭐⭐⭐⭐⭐
             </div>
 
@@ -80,7 +87,8 @@ function Testimonials() {
 
       </div>
 
-      {/* TESTIMONIAL POPUP */}
+
+      {/* ================= TESTIMONIAL POPUP ================= */}
 
       {selectedTestimonial && (
 
@@ -97,25 +105,34 @@ function Testimonials() {
             <button
               className="testimonial-close"
               onClick={() => setSelectedTestimonial(null)}
+              aria-label="Close testimonial"
             >
               ✕
             </button>
 
-            <div className="popup-stars">
+
+            <div
+              className="popup-stars"
+              aria-label="5 star rating"
+            >
               ⭐⭐⭐⭐⭐
             </div>
+
 
             <div className="quote-icon">
               “
             </div>
 
+
             <p className="popup-review">
               "{selectedTestimonial.review}"
             </p>
 
+
             <h2>
               {selectedTestimonial.name}
             </h2>
+
 
             <p className="popup-details">
               {selectedTestimonial.details}

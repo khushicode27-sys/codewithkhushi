@@ -90,15 +90,24 @@ function Subjects() {
   return (
     <section className="subjects" id="subjects">
 
+      {/* SECTION HEADER */}
+
       <div className="subjects-header">
-        <h2>📚 Academic Subjects</h2>
+
+        <h2>
+          📚 Academic Subjects for School Students
+        </h2>
 
         <p>
-          Along with Coding, we provide quality coaching for
-          school subjects with concept-based learning and
-          personal guidance.
+          Along with coding and technology courses, we provide
+          academic coaching for school students with concept-based
+          learning, regular practice and personal guidance.
         </p>
+
       </div>
+
+
+      {/* SUBJECTS GRID */}
 
       <div className="subjects-grid">
 
@@ -127,9 +136,14 @@ function Subjects() {
 
       </div>
 
+
+      {/* CLASS INFORMATION */}
+
       <div className="subject-note">
 
-        <h3>🎓 Classes Available for Grade 1–10</h3>
+        <h3>
+          🎓 Classes Available for Grade 1–10
+        </h3>
 
         <p>
           Small batches • Personal Attention • Weekly Tests •
@@ -150,6 +164,7 @@ function Subjects() {
 
       </div>
 
+
       {/* SUBJECT POPUP */}
 
       {selectedSubject && (
@@ -163,22 +178,37 @@ function Subjects() {
             onClick={(e) => e.stopPropagation()}
           >
 
+            {/* CLOSE */}
+
             <button
               className="subject-popup-close"
               onClick={() => setSelectedSubject(null)}
+              aria-label="Close subject details"
             >
               ✕
             </button>
+
+
+            {/* ICON */}
 
             <div className="subject-popup-icon">
               {selectedSubject.icon}
             </div>
 
+
+            {/* TITLE */}
+
             <h2>{selectedSubject.title}</h2>
+
+
+            {/* DETAILS */}
 
             <p>
               {selectedSubject.details}
             </p>
+
+
+            {/* WHATSAPP */}
 
             <button
               className="subject-enquire"

@@ -15,6 +15,7 @@ function Projects() {
     {
       image: scratch,
       title: "🎮 Scratch Games",
+      alt: "Scratch coding games and animation projects for kids",
       description:
         "Create fun games and animations using Scratch. Students learn programming concepts through creative and interactive projects.",
     },
@@ -22,6 +23,7 @@ function Projects() {
     {
       image: robot,
       title: "🤖 Smart Robot",
+      alt: "Arduino smart robot project for students",
       description:
         "Build smart robots using Arduino and sensors while learning the fundamentals of electronics, coding and robotics.",
     },
@@ -29,6 +31,7 @@ function Projects() {
     {
       image: traffic,
       title: "🚦 Traffic Light",
+      alt: "Traffic light electronics and coding project for students",
       description:
         "Learn electronics and programming by creating a working traffic light project using LEDs and basic components.",
     },
@@ -36,6 +39,7 @@ function Projects() {
     {
       image: calculator,
       title: "🐍 Python Calculator",
+      alt: "Python calculator project for beginner programming students",
       description:
         "Create your first Python application and understand variables, functions, inputs and basic programming logic.",
     },
@@ -43,6 +47,7 @@ function Projects() {
     {
       image: portfolio,
       title: "🌐 Personal Portfolio",
+      alt: "Personal portfolio website project for students",
       description:
         "Design and build your own professional portfolio website using modern web development concepts.",
     },
@@ -55,17 +60,24 @@ function Projects() {
   return (
     <section className="projects" id="projects">
 
+      {/* SECTION HEADER */}
+
       <div className="projects-header">
 
-        <h2>🚀 Projects You'll Build</h2>
+        <h2>
+          🚀 Coding Projects for Kids & Students
+        </h2>
 
         <p>
-          Learn by creating exciting real-world projects and build
-          confidence through practical learning.
+          Learn by building exciting real-world projects in Scratch,
+          Python, Robotics and Web Development. Practical projects
+          help students understand concepts and build confidence.
         </p>
 
       </div>
 
+
+      {/* PROJECT GRID */}
 
       <div className="projects-grid">
 
@@ -78,9 +90,11 @@ function Projects() {
 
             <img
               src={project.image}
-              alt={project.title}
+              alt={project.alt}
               className="project-img"
+              loading="lazy"
             />
+
 
             <div className="project-content">
 
@@ -104,7 +118,7 @@ function Projects() {
       </div>
 
 
-      {/* ================= PROJECT POPUP ================= */}
+      {/* PROJECT POPUP */}
 
       {selectedProject && (
 
@@ -121,7 +135,7 @@ function Projects() {
             <button
               className="project-popup-close"
               onClick={closePopup}
-              aria-label="Close"
+              aria-label="Close project details"
             >
               ✕
             </button>
@@ -129,7 +143,7 @@ function Projects() {
 
             <img
               src={selectedProject.image}
-              alt={selectedProject.title}
+              alt={selectedProject.alt}
             />
 
 

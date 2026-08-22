@@ -13,8 +13,8 @@ function About() {
         </span>
 
         <h2>
-          Turning Curiosity Into
-          <span> Future-Ready Skills</span>
+          About CodeWithKhushi:
+          <span> Learn, Create & Build Future Skills</span>
         </h2>
 
         <p className="about-intro">
@@ -25,64 +25,89 @@ function About() {
 
         <p className="about-text">
           Through live interactive classes, students learn Coding,
-          Artificial Intelligence, Robotics and Web Development by
-          actually building projects instead of simply memorizing
+          Python, Artificial Intelligence, Robotics and Web Development
+          by building practical projects instead of simply memorizing
           concepts.
         </p>
+
 
         {/* ================= HIGHLIGHTS ================= */}
 
         <div className="about-highlights">
 
           <div className="about-highlight">
+
             <span>💻</span>
 
             <div>
-              <h3>Practical Learning</h3>
+
+              <h3>
+                Practical Coding Learning
+              </h3>
 
               <p>
                 Learn by building real-world projects.
               </p>
+
             </div>
+
           </div>
 
 
           <div className="about-highlight">
+
             <span>🤖</span>
 
             <div>
-              <h3>Future Skills</h3>
+
+              <h3>
+                Future-Ready Technology Skills
+              </h3>
 
               <p>
-                Coding, AI, Robotics & modern technology.
+                Coding, AI, Robotics and modern technology.
               </p>
+
             </div>
+
           </div>
 
 
           <div className="about-highlight">
+
             <span>👩‍🏫</span>
 
             <div>
-              <h3>Personal Guidance</h3>
+
+              <h3>
+                Personal Guidance
+              </h3>
 
               <p>
                 Interactive classes with individual attention.
               </p>
+
             </div>
+
           </div>
 
 
           <div className="about-highlight">
+
             <span>🏆</span>
 
             <div>
-              <h3>Achievement Focused</h3>
+
+              <h3>
+                Achievement Focused
+              </h3>
 
               <p>
                 Projects, certificates and confidence building.
               </p>
+
             </div>
+
           </div>
 
         </div>
@@ -117,11 +142,15 @@ function About() {
             </div>
 
             <div>
-              <h3>Khushi Chauhan</h3>
+
+              <h3>
+                Khushi Chauhan
+              </h3>
 
               <p>
                 Founder • CodeWithKhushi
               </p>
+
             </div>
 
           </div>
@@ -151,26 +180,46 @@ function About() {
           <div className="about-stats">
 
             <div>
+
               <strong>500+</strong>
-              <span>Target Students</span>
+
+              <span>
+                Target Students
+              </span>
+
             </div>
 
 
             <div>
+
               <strong>50+</strong>
-              <span>Target Projects</span>
+
+              <span>
+                Target Projects
+              </span>
+
             </div>
 
 
             <div>
+
               <strong>100%</strong>
-              <span>Practical Learning</span>
+
+              <span>
+                Practical Learning
+              </span>
+
             </div>
 
 
             <div>
+
               <strong>2+</strong>
-              <span>Target Recognitions</span>
+
+              <span>
+                Target Recognitions
+              </span>
+
             </div>
 
           </div>
@@ -179,7 +228,7 @@ function About() {
           {/* CARD FOOTER */}
 
           <div className="about-card-footer">
-            🚀 Coding • AI • Robotics • Web Development
+            🚀 Coding • Python • AI • Robotics • Web Development
           </div>
 
         </div>

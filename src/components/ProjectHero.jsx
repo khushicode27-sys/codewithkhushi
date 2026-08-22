@@ -11,16 +11,16 @@ function ProjectHero() {
         </span>
 
         <h1>
-          Build.
-          <span> Create.</span>
+          Coding Projects
+          <span> for Kids & Students</span>
           <br />
-          Innovate.
+          Build. Create. Innovate.
         </h1>
 
         <p>
-          Turn your ideas into real-world projects with
-          Coding, AI, Robotics, Scratch and Web Development.
-          Learn by building, experimenting and creating.
+          Turn your ideas into real-world projects with Coding,
+          Python, AI, Robotics, Scratch and Web Development.
+          Learn by building, experimenting and creating practical projects.
         </p>
 
         <div className="project-hero-buttons">

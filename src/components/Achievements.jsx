@@ -13,24 +13,31 @@ function Achievements() {
     {
       image: certificate1,
       title: "🏆 Inspiring Teacher Award",
+      alt: "Inspiring Teacher Award certificate - CodeWithKhushi",
       description:
         "Recognition for inspiring students through dedicated teaching, practical learning and continuous mentorship.",
     },
+
     {
       image: certificate2,
       title: "🎓 ITO Certified Educator",
+      alt: "ITO Certified Educator certificate - CodeWithKhushi",
       description:
         "Certified educator recognition reflecting commitment to quality education and student development.",
     },
+
     {
       image: certificate3,
       title: "🥇 Teaching Excellence",
+      alt: "Teaching Excellence certificate - CodeWithKhushi",
       description:
         "Recognition for excellence in teaching and creating an engaging learning environment.",
     },
+
     {
       image: certificate4,
       title: "🤖 AI & Robotics Mentor",
+      alt: "AI and Robotics Mentor certificate - CodeWithKhushi",
       description:
         "Recognition for mentoring students in Artificial Intelligence, Robotics and practical technology projects.",
     },
@@ -39,22 +46,33 @@ function Achievements() {
   return (
     <section className="achievements" id="achievements">
 
+      {/* ================= HEADER ================= */}
+
       <div className="achievement-heading">
+
         <span className="achievement-tag">
           🏆 OUR ACHIEVEMENTS
         </span>
 
-        <h2>Achievements & Certificates</h2>
+        <h2>
+          Teaching Achievements & Certificates
+        </h2>
 
         <p>
-          Our achievements reflect our commitment to quality education,
-          Coding, AI and Robotics.
+          Our achievements and certifications reflect our commitment
+          to quality education, practical learning, Coding, AI and
+          Robotics.
         </p>
+
       </div>
+
+
+      {/* ================= CERTIFICATES ================= */}
 
       <div className="achievement-grid">
 
         {certificates.map((item, index) => (
+
           <div
             className="achievement-card"
             key={index}
@@ -62,26 +80,34 @@ function Achievements() {
           >
 
             <div className="certificate-image">
+
               <img
                 src={item.image}
-                alt={item.title}
+                alt={item.alt}
+                loading="lazy"
               />
+
             </div>
 
-            <h3>{item.title}</h3>
+            <h3>
+              {item.title}
+            </h3>
 
             <span className="view-certificate">
               View Certificate →
             </span>
 
           </div>
+
         ))}
 
       </div>
 
-      {/* CERTIFICATE POPUP */}
+
+      {/* ================= CERTIFICATE POPUP ================= */}
 
       {selectedCertificate && (
+
         <div
           className="certificate-popup"
           onClick={() => setSelectedCertificate(null)}
@@ -95,16 +121,22 @@ function Achievements() {
             <button
               className="close-popup"
               onClick={() => setSelectedCertificate(null)}
+              aria-label="Close certificate"
             >
               ✕
             </button>
 
+
             <img
               src={selectedCertificate.image}
-              alt={selectedCertificate.title}
+              alt={selectedCertificate.alt}
             />
 
-            <h2>{selectedCertificate.title}</h2>
+
+            <h2>
+              {selectedCertificate.title}
+            </h2>
+
 
             <p>
               {selectedCertificate.description}
@@ -113,6 +145,7 @@ function Achievements() {
           </div>
 
         </div>
+
       )}
 
     </section>

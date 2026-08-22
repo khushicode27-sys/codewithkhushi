@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import "../styles/Footer.css";
+
 import {
   FaWhatsapp,
   FaInstagram,
@@ -12,25 +14,58 @@ function Footer() {
 
       <div className="footer-container">
 
+        {/* ABOUT */}
+
         <div className="footer-about">
+
           <h2>CodeWithKhushi</h2>
 
           <p>
-            Learn Coding, AI & Robotics through practical projects,
-            live interactive classes and industry-ready skills.
+            Learn Coding, Python, AI, Robotics and Web Development
+            through practical projects and live interactive classes.
           </p>
+
         </div>
+
+
+        {/* QUICK LINKS */}
 
         <div className="footer-links">
 
           <h3>Quick Links</h3>
 
-          <a href="#home">Home</a>
-          <a href="#courses">Courses</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+          <Link to="/">
+            Home
+          </Link>
+
+          <Link to="/courses">
+            Coding Courses
+          </Link>
+
+          <Link to="/projects">
+            Coding Projects
+          </Link>
+
+          <Link to="/about">
+            About CodeWithKhushi
+          </Link>
+
+          <Link to="/testimonials">
+            Student Feedback
+          </Link>
+
+          <Link to="/faq">
+            FAQs
+          </Link>
+
+          <Link to="/contact">
+            Contact
+          </Link>
 
         </div>
+
+
+        {/* CONTACT */}
 
         <div className="footer-contact">
 
@@ -40,12 +75,16 @@ function Footer() {
 
           <p>📧 khushicode27@gmail.com</p>
 
+
+          {/* SOCIAL LINKS */}
+
           <div className="footer-social">
 
             <a
               href="https://wa.me/916367975699"
               target="_blank"
               rel="noreferrer"
+              aria-label="WhatsApp"
             >
               <FaWhatsapp />
             </a>
@@ -54,6 +93,7 @@ function Footer() {
               href="https://www.instagram.com/codewithkhushi_ai"
               target="_blank"
               rel="noreferrer"
+              aria-label="Instagram"
             >
               <FaInstagram />
             </a>
@@ -62,6 +102,7 @@ function Footer() {
               href="https://www.facebook.com/share/1Azt2JSGRw/"
               target="_blank"
               rel="noreferrer"
+              aria-label="Facebook"
             >
               <FaFacebook />
             </a>
@@ -70,6 +111,7 @@ function Footer() {
               href="https://www.youtube.com/@khushichauhan2528"
               target="_blank"
               rel="noreferrer"
+              aria-label="YouTube"
             >
               <FaYoutube />
             </a>
@@ -79,6 +121,9 @@ function Footer() {
         </div>
 
       </div>
+
+
+      {/* COPYRIGHT */}
 
       <div className="footer-bottom">
         © 2026 CodeWithKhushi | All Rights Reserved.

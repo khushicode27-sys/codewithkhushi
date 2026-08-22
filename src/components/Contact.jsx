@@ -38,46 +38,72 @@ function Contact() {
   return (
     <section className="contact" id="contact">
 
+      {/* ================= HEADER ================= */}
+
       <div className="contact-title">
+
         <span className="contact-tag">
           📩 GET IN TOUCH
         </span>
 
-        <h2>Contact Us</h2>
+        <h2>
+          Contact CodeWithKhushi
+        </h2>
 
         <p>
-          Have any questions? We'd love to hear from you.
+          Have questions about our online coding classes, Python,
+          Robotics, AI or Web Development courses? We'd love to
+          hear from you.
         </p>
+
       </div>
+
 
       <div className="contact-wrapper">
 
-        {/* CONTACT INFORMATION */}
+        {/* ================= CONTACT INFORMATION ================= */}
 
         <div className="contact-info">
 
-          <h3>Let's Connect 🚀</h3>
+          <h3>
+            Let's Connect 🚀
+          </h3>
 
           <p>
-            Learn Coding, AI & Robotics with practical
-            projects and live interactive classes.
+            Learn Coding, Python, AI, Robotics and Web Development
+            through practical projects and live interactive classes.
           </p>
+
+
+          {/* PHONE */}
 
           <a
             href="tel:+916367975699"
             className="info-box"
           >
             <FaPhone />
-            <span>+91 6367975699</span>
+
+            <span>
+              +91 6367975699
+            </span>
           </a>
+
+
+          {/* EMAIL */}
 
           <a
             href="mailto:khushicode27@gmail.com"
             className="info-box"
           >
             <FaEnvelope />
-            <span>khushicode27@gmail.com</span>
+
+            <span>
+              khushicode27@gmail.com
+            </span>
           </a>
+
+
+          {/* SOCIAL MEDIA */}
 
           <div className="social-icons">
 
@@ -90,6 +116,7 @@ function Contact() {
               <FaWhatsapp />
             </a>
 
+
             <a
               href="https://www.instagram.com/codewithkhushi_ai"
               target="_blank"
@@ -99,6 +126,7 @@ function Contact() {
               <FaInstagram />
             </a>
 
+
             <a
               href="https://www.facebook.com/share/1Azt2JSGRw/"
               target="_blank"
@@ -107,6 +135,7 @@ function Contact() {
             >
               <FaFacebook />
             </a>
+
 
             <a
               href="https://www.youtube.com/@khushichauhan2528"
@@ -121,7 +150,8 @@ function Contact() {
 
         </div>
 
-        {/* CONTACT FORM */}
+
+        {/* ================= CONTACT FORM ================= */}
 
         <form
           ref={form}
@@ -133,22 +163,28 @@ function Contact() {
             type="text"
             name="from_name"
             placeholder="Your Name"
+            autoComplete="name"
             required
           />
+
 
           <input
             type="email"
             name="from_email"
             placeholder="Your Email"
+            autoComplete="email"
             required
           />
+
 
           <input
             type="tel"
             name="phone"
             placeholder="Phone Number"
+            autoComplete="tel"
             required
           />
+
 
           <input
             type="text"
@@ -157,12 +193,14 @@ function Contact() {
             required
           />
 
+
           <textarea
             name="message"
             placeholder="Your Message"
             rows="5"
             required
           ></textarea>
+
 
           <button
             type="submit"
@@ -173,16 +211,27 @@ function Contact() {
               : "Send Message →"}
           </button>
 
+
+          {/* SUCCESS */}
+
           {status === "success" && (
+
             <div className="form-message success">
               ✅ Message sent successfully! We'll get back to you soon.
             </div>
+
           )}
 
+
+          {/* ERROR */}
+
           {status === "error" && (
+
             <div className="form-message error">
-              ❌ Something went wrong. Please try again or contact us on WhatsApp.
+              ❌ Something went wrong. Please try again or contact us
+              on WhatsApp.
             </div>
+
           )}
 
         </form>

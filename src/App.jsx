@@ -8,6 +8,9 @@ import AIHero from "./components/AIHero";
 import PageNavigation from "./components/PageNavigation";
 
 import Navbar from "./components/Navbar";
+import Blog from "./components/Blog";
+import BlogPostCodingForKids from "./components/BlogPostCodingForKids";
+
 import Hero from "./components/Hero";
 import Featured from "./components/Featured";
 import Projects from "./components/Projects";
@@ -71,6 +74,20 @@ function CoursesPage() {
       />
     </>
   );
+}
+
+
+/* ================= BLOG ================= */
+
+function BlogPage() {
+  return <Blog />;
+}
+
+
+/* ================= BLOG POST ================= */
+
+function BlogPostCodingForKidsPage() {
+  return <BlogPostCodingForKids />;
 }
 
 
@@ -235,6 +252,22 @@ function App() {
           <Route
             path="/courses"
             element={<CoursesPage />}
+          />
+
+
+          {/* BLOG */}
+
+          <Route
+            path="/blog"
+            element={<BlogPage />}
+          />
+
+
+          {/* BLOG POST */}
+
+          <Route
+            path="/blog/coding-for-kids"
+            element={<BlogPostCodingForKidsPage />}
           />
 
 

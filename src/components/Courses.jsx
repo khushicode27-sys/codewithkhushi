@@ -124,14 +124,25 @@ function Courses() {
   return (
     <section className="courses" id="courses">
 
+      {/* SECTION TITLE */}
+
       <div className="section-title">
-        <h2>Our Courses</h2>
+
+        <h2>
+          Online Coding & Technology Courses for Kids and Students
+        </h2>
 
         <p>
-          Learn industry-ready skills through practical,
+          Explore online coding classes for kids and school students,
+          including C, C++, Python, Web Development, Artificial
+          Intelligence, Robotics and Scratch through practical,
           project-based learning.
         </p>
+
       </div>
+
+
+      {/* COURSES GRID */}
 
       <div className="courses-grid">
 
@@ -145,11 +156,14 @@ function Courses() {
               {course.icon}
             </div>
 
+
             <h3>{course.title}</h3>
+
 
             <p className="animated-text">
               {courseTexts[course.id][textIndex]}
             </p>
+
 
             <button
               onClick={() => setSelectedCourse(course)}
@@ -161,6 +175,7 @@ function Courses() {
         ))}
 
       </div>
+
 
       {/* COURSE POPUP */}
 
@@ -175,22 +190,37 @@ function Courses() {
             onClick={(e) => e.stopPropagation()}
           >
 
+            {/* CLOSE BUTTON */}
+
             <button
               className="course-popup-close"
               onClick={() => setSelectedCourse(null)}
+              aria-label="Close course details"
             >
               ✕
             </button>
+
+
+            {/* COURSE ICON */}
 
             <div className="course-popup-icon">
               {selectedCourse.icon}
             </div>
 
+
+            {/* COURSE TITLE */}
+
             <h2>{selectedCourse.title}</h2>
+
+
+            {/* COURSE DETAILS */}
 
             <p>
               {selectedCourse.details}
             </p>
+
+
+            {/* WHATSAPP ENQUIRY */}
 
             <button
               className="course-enquire"

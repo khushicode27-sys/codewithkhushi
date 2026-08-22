@@ -4,34 +4,45 @@ import { useState } from "react";
 function FAQ() {
   const faqs = [
     {
-      question: "💻 Are the classes online?",
+      question: "💻 Are the coding classes online?",
       answer:
-        "Yes, all classes are conducted live online through interactive sessions.",
+        "Yes, all classes are conducted live online through interactive sessions. Students can learn Coding, Python, AI, Robotics and other technology skills from home.",
     },
+
     {
-      question: "👨‍🎓 Can beginners join?",
+      question: "👨‍🎓 Can beginners join the coding classes?",
       answer:
-        "Absolutely! Our courses are designed for complete beginners as well as advanced learners.",
+        "Absolutely! Our courses are designed for complete beginners as well as learners with previous programming experience. Students can start from the basics and learn step by step.",
     },
+
+    {
+      question: "👦 Are the coding classes suitable for kids and school students?",
+      answer:
+        "Yes. CodeWithKhushi offers beginner-friendly technology learning for kids and school students, with practical projects and age-appropriate guidance.",
+    },
+
     {
       question: "📜 Will I receive a certificate?",
       answer:
         "Yes, every student receives a Course Completion Certificate after successfully finishing the course.",
     },
+
     {
       question: "🎁 Is there a free demo class?",
       answer:
-        "Yes! You can attend a FREE demo class before enrolling.",
+        "Yes! You can attend a FREE demo class before enrolling to understand the teaching approach and course experience.",
     },
+
     {
       question: "⏳ What is the course duration?",
       answer:
-        "Most courses are completed within 1–3 months depending on the selected course.",
+        "Most courses are completed within 1–3 months depending on the selected course, learning level and course curriculum.",
     },
+
     {
-      question: "💰 What are the course fees?",
+      question: "💰 What are the coding course fees?",
       answer:
-        "Our fees are affordable. Contact us on WhatsApp for the latest fee structure.",
+        "Our fees are affordable and depend on the selected course. Contact us on WhatsApp for the latest fee structure and available batches.",
     },
   ];
 
@@ -40,20 +51,28 @@ function FAQ() {
   return (
     <section className="faq" id="faq">
 
+      {/* ================= HEADER ================= */}
+
       <div className="faq-header">
 
         <span className="faq-tag">
           ❓ HAVE QUESTIONS?
         </span>
 
-        <h2>Frequently Asked Questions</h2>
+        <h2>
+          Frequently Asked Questions About Our Coding Classes
+        </h2>
 
         <p>
-          Find answers to the most common questions about our Coding,
-          AI & Robotics classes.
+          Find answers to common questions about our online Coding,
+          Python, AI, Robotics and technology classes for kids and
+          school students.
         </p>
 
       </div>
+
+
+      {/* ================= FAQ LIST ================= */}
 
       <div className="faq-container">
 
@@ -73,18 +92,29 @@ function FAQ() {
               }
             >
 
-              <h3>{item.question}</h3>
+              <h3>
+                {item.question}
+              </h3>
 
-              <span>
+              <span
+                aria-hidden="true"
+              >
                 {open === index ? "−" : "+"}
               </span>
 
             </div>
 
+
             {open === index && (
+
               <div className="faq-answer">
-                <p>{item.answer}</p>
+
+                <p>
+                  {item.answer}
+                </p>
+
               </div>
+
             )}
 
           </div>
@@ -93,9 +123,14 @@ function FAQ() {
 
       </div>
 
+
+      {/* ================= CTA ================= */}
+
       <div className="faq-bottom">
 
-        <h3>Still have questions? 🤔</h3>
+        <h3>
+          Still have questions? 🤔
+        </h3>
 
         <p>
           Feel free to contact us and we'll be happy to help.

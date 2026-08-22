@@ -5,12 +5,18 @@ function Featured() {
   return (
     <section className="featured" id="featured">
 
-      <h2>⭐ Featured Courses</h2>
+      {/* SECTION HEADER */}
+
+      <h2>
+        ⭐ Featured Coding Courses for Kids
+      </h2>
 
       <p className="featured-text">
-        Our most popular courses designed to build creativity,
-        coding skills and future-ready minds.
+        Explore popular courses designed to build creativity,
+        programming skills and practical, future-ready knowledge
+        through engaging projects.
       </p>
+
 
       <div className="featured-cards">
 
@@ -22,12 +28,14 @@ function Featured() {
             Most Popular
           </span>
 
-          <h3>🎮 Scratch Coding</h3>
+          <h3>
+            🎮 Scratch Coding for Kids
+          </h3>
 
           <p>
-            Learn coding by creating Games, Animations
-            and Interactive Stories. Perfect for kids
-            aged 6–14.
+            Learn programming basics by creating games, animations
+            and interactive stories. A beginner-friendly way for
+            kids aged 6–14 to start learning coding.
           </p>
 
           <Link
@@ -48,11 +56,14 @@ function Featured() {
             Trending
           </span>
 
-          <h3>🤖 Robotics</h3>
+          <h3>
+            🤖 Robotics for Kids
+          </h3>
 
           <p>
-            Build real robotics projects using Arduino,
-            Sensors and STEM concepts with hands-on learning.
+            Build practical robotics projects using Arduino,
+            sensors and STEM concepts while developing coding,
+            problem-solving and creative skills.
           </p>
 
           <Link
@@ -73,11 +84,14 @@ function Featured() {
             New
           </span>
 
-          <h3>🐍 Python Programming</h3>
+          <h3>
+            🐍 Python Programming for Beginners
+          </h3>
 
           <p>
-            Learn Python from basics to real-world projects
-            with interactive live classes.
+            Learn Python from the basics and gradually build
+            practical applications and beginner-friendly projects
+            through interactive learning.
           </p>
 
           <Link

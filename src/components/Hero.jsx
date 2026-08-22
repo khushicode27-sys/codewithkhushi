@@ -13,31 +13,26 @@ function Hero() {
         </p>
 
         <h1 className="hero-title">
-          <span className="word word-1">Learn</span>{" "}
-          <span className="word word-2 highlight">Coding</span>
-          <span className="word word-3">, AI &</span>{" "}
-          <span className="word word-4">Robotics</span>
+          <span className="word word-1">Online Coding Classes</span>{" "}
+          <span className="word word-2 highlight">for Kids</span>{" "}
+          <span className="word word-3">& School Students</span>
+          <span className="word word-4"> in India</span>
         </h1>
 
         <p className="hero-subtitle">
-          Learn Python, C++, Java, Web Development,
-          Artificial Intelligence and Robotics through
-          practical projects.
+          Learn Coding, Python, C++, Java, Scratch, Web Development,
+          Artificial Intelligence and Robotics through live, practical
+          and project-based learning.
         </p>
 
         <div className="hero-buttons">
-
-          {/* COURSES PAGE */}
 
           <Link
             to="/courses"
             className="primary"
           >
-            Start Learning →
+            Explore Courses →
           </Link>
-
-
-          {/* FREE DEMO */}
 
           <Link
             to="/courses#demo"
@@ -50,12 +45,11 @@ function Hero() {
 
       </div>
 
-
       <div className="hero-right">
 
         <img
           src={coding}
-          alt="Coding"
+          alt="Online coding classes for kids and school students"
           className="hero-image"
         />
 
